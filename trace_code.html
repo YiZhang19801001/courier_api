@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">AUPOS</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="info_create.html"
+              >CREATE <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info_trace.html">TRACK</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              CODE HELPER
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="currency_code.html"
+                >CURRENCY CODE</a
+              >
+              <a class="dropdown-item" href="country_code.html">COUNTRY CODE</a>
+              <a class="dropdown-item" href="service_code.html">SERVICE CODE</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>代码</th>
+            <th>解释</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>PU</th>
+            <td>货物已从发件人处提取</td>
+          </tr>
+          <tr>
+            <th>CL</th>
+            <td>站点揽收</td>
+          </tr>
+          <tr>
+            <th>AO</th>
+            <td>到达海外仓库</td>
+          </tr>
+          <tr>
+            <th>OC</th>
+            <td>操作完成</td>
+          </tr>
+          <tr>
+            <th>LO</th>
+            <td>离开海外仓库</td>
+          </tr>
+          <tr>
+            <th>FT</th>
+            <td>航班起飞</td>
+          </tr>
+          <tr>
+            <th>FL</th>
+            <td>航班降落</td>
+          </tr>
+          <tr>
+            <th>KRW</th>
+            <td>韩元</td>
+          </tr>
+          <tr>
+            <th>TRM</th>
+            <td>正在送往清关口岸</td>
+          </tr>
+          <tr>
+            <th>CCE</th>
+            <td>已清关完成</td>
+          </tr>
+          <tr>
+            <th>OK</th>
+            <td>货物已经派送</td>
+          </tr>
+          <tr>
+            <th>CP</th>
+            <td>货物正在清关，等候海关放行</td>
+          </tr>
+          <tr>
+            <th>CCMC</th>
+            <td>货物已经遗失</td>
+          </tr>
+          <tr>
+            <th>CCSD</th>
+            <td>货物已经被销毁</td>
+          </tr>
+          <tr>
+            <th>IDCS</th>
+            <td>身份证信息收集</td>
+          </tr>
+          <tr>
+            <th>IS</th>
+            <td>已交接国内派送服务商</td>
+          </tr>
+          <tr>
+            <th>PL</th>
+            <td>作业中心内部操作</td>
+          </tr>
+          <tr>
+            <th>PO</th>
+            <td>海外仓库打单</td>
+          </tr>
+          <tr>
+            <th>RT</th>
+            <td>货物已退回发件地</td>
+          </tr>
+          <tr>
+            <th>SD</th>
+            <td>货物破损</td>
+          </tr>
+          <tr>
+            <th>SH</th>
+            <td>货物暂扣</td>
+          </tr>
+          <tr>
+            <th>HC</th>
+            <td>海关扣件</td>
+          </tr>
+          <tr>
+            <th>TRM</th>
+            <td>正在送往清关口岸</td>
+          </tr>
+          <tr>
+            <th>PTW</th>
+            <td>包裹从机场提取，转往海关监管仓</td>
+          </tr>
+          <tr>
+            <th>WA</th>
+            <td>等待安排航班</td>
+          </tr>
+          <tr>
+            <th>WT</th>
+            <td>等待安排转关</td>
+          </tr>
+          <tr>
+            <th>WD</th>
+            <td>等待清关</td>
+          </tr>
+          <tr>
+            <th>OK</th>
+            <td>派送完成</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
