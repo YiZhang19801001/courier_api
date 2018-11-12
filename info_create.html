@@ -54,6 +54,8 @@
         <h5>request body</h5>
         <code>
             {
+            "branchId":"SHOP111",
+            "branchKey":"123456",
             "strOrderNo": "tes017fezq8f2001",
             "strServiceTypeCode": "EC",
             "strShopCode": " MPX01",
@@ -99,12 +101,70 @@
           <h5>Response</h5>
           <code>
             {
-            "orderNumber": null,
-            "message": {"code":"OK 10000","text":"Order Successfully Created, Please Save your order number for further service refferences"},
-            "TaxAmount": 10.67,
-            "TaxCurrencyCode": "AUD"
+                "orderNumber": null,
+                "resCode":"0",
+                "resMsg":"Order Successfully Created, Please Save your order number for further service refferences",
+                "TaxAmount": 10.67,
+                "TaxCurrencyCode": "AUD"
             }
           </code>
+    </div>
+    <hr>
+    <div class="container mt-3">
+        <h5>request body (inactive user)</h5>
+        <code>
+                {
+                "branchId":"SHOP333",
+                "branchKey":"123456",
+                "strOrderNo": "tes017fezq8f2001",
+                "strServiceTypeCode": "EC",
+                "strShopCode": " MPX01",
+                "strSenderName": "王哈哈",
+                "strSenderMobile": "16987654321",
+                "strReceiverName": "小明",
+                "strReceiverProvince": "广东省",
+                "strReceiverCity": "深圳市",
+                "strReceiverDistrict": "宝安区",
+                "strReceiverDoorNo": "宝城6区新安二路57号",
+                "strReceiverMobile": "13245671234",
+                "strOrderWeight": "1.000",
+                "strWeightUnit": "KG",
+                "strItemCurrency": "CNY",
+                "strInsuranceTypeCode": "",
+                "strEndDelivertyType": "",
+                "strTraceNumber": "",
+                "items": [
+                    {
+                        "strItemSKU": "test123456",
+                        "strItemDeclareType": "01010700002",
+                        "strItemBrand": "A2",
+                        "strItemName": "婴幼儿奶粉",
+                        "numItemQuantity": "1",
+                        "strItemSpecifications": "900g二段",
+                        "numItemUnitPrice": "85",
+                        "strIsDiscounted": ""
+                    },
+                    {
+                        "strItemSKU": "test123ab56",
+                        "strItemDeclareType": "01010700002",
+                        "strItemBrand": "A2",
+                        "strItemName": "婴幼儿奶",
+                        "numItemQuantity": "1",
+                        "strItemSpecifications": "900g二段",
+                        "numItemUnitPrice": "85",
+                        "strIsDiscounted": ""
+                    }
+                    ]
+                }
+    
+                </code>
+        <h5>Response</h5>
+        <code>
+            {
+            "resCode": "3",
+            "resMsg": "your account is inactived, please contact XXX-XXXX-XXX"
+            }   
+        </code>
     </div>
     <div class="container col-12 mt-5">
         <h2>Request JSON</h2>
@@ -119,7 +179,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-primar">
+                <tr class="table-primary">
+                    <th colspan="2" scope="row">-2</th>
+                    <td>branchId</td>
+                    <td>C(11)</td>
+                    <td>客户编码</td>
+                    <td>SHOP111</td>
+                </tr>
+                <tr class="table-primary">
+                    <th colspan="2" scope="row">-1</th>
+                    <td>branchKey</td>
+                    <td>C(11)</td>
+                    <td>客户密匙</td>
+                    <td>123456</td>
+                </tr>
+                <tr class="table-primary">
                     <th colspan="2" scope="row">0</th>
                     <td>strProviderCode</td>
                     <td>C(11)</td>

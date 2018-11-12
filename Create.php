@@ -28,10 +28,12 @@ function cleanValue($value){
     return htmlspecialchars(strip_tags($value));
 }
 
+
+
 function translateResponseMsg($msg,$code){
     switch ($code) {
         case 10000:
-            return array("code"=>"OK 10000","text"=>"Order Successfully Created, Please Save your order number for further service refferences");
+            return array("code"=>"0","text"=>"Order Successfully Created, Please Save your order number for further service refferences");
         case 12001:
             return array("code"=>"ERR12001","text"=>"order has not been created, please try again or contact xxx-xxx-xxxx");
         case 11004:
@@ -141,79 +143,120 @@ function translateResponseMsg($msg,$code){
 //get raw posted data
 $data_raw = json_decode(file_get_contents("php://input"));
 
+//validate user
+$shop_id = $data_raw->branchId;
+$shop_key = $data_raw->branchKey;
+// todo:: valide with DB data
+$validation_res = 2;
+if($shop_id == "SHOP111" && $shop_key = "123456")
+{
+    $validation_res = 1;
+}
+else if($shop_id == "SHOP333" && $shop_key = "123456")
+{
+    $validation_res = 3;
+}
+else{
+    $validation_res =2;
+}
 
-//map values
-$data_arr = array(
-"Token"=> "TESTC78C-7923-404C-82CF-CD881539123c",
-"Data"=> [
-    "ShipperOrderNo"=> cleanValue($data_raw->strOrderNo),
-    "ServiceTypeCode"=> cleanValue($data_raw->strServiceTypeCode),
-    "TerminalCode"=> cleanValue($data_raw->strShopCode),
-    "ConsignerName"=> cleanValue($data_raw->strSenderName), 
-    "ConsignerMobile"=> cleanValue($data_raw->strSenderMobile),
-    "ConsignerProvinceName"=>isset($data_raw->strSenderProvinceName)?cleanValue($data_raw->strSenderProvinceName):null,
-    "ConsignerCityName"=>isset($data_raw->strSenderCityName)?cleanValue($data_raw->strSenderCityName):null,
-    "ConsignerAddress"=>isset($data_raw->strSenderAddress)?cleanValue($data_raw->strSenderAddress):null,
-    "ConsignerPostCode"=> isset($data_raw->strSenderPostCode)?cleanValue($data_raw->strSenderPostCode):null,
-    "ItemDeclareCurrency"=> cleanValue($data_raw->strItemCurrency),
-    "ConsigneeName"=> cleanValue($data_raw->strReceiverName),
-    "CountryISO2"=>isset($data_raw->strCountryISO2)?cleanValue($data_raw->strCountryISO2):null,
-    "Province"=> isset($data_raw->strReceiverProvince)?cleanValue($data_raw->strReceiverProvince):null,
-    "City"=> isset($data_raw->strReceiverCity)?cleanValue($data_raw->strReceiverCity):null,
-    "District"=> isset($data_raw->strReceiverDistrict)?cleanValue($data_raw->strReceiverDistrict):null,
-    "ConsigneeStreetDoorNo"=> cleanValue($data_raw->strReceiverDoorNo),
-    "ConsigneeMobile"=> cleanValue($data_raw->strReceiverMobile),
-    "ConsigneeIDNumber"=>isset($data_raw->strReceiverIDNumber)?cleanValue($data_raw->strReceiverIDNumber):null,
-    "ConsigneeIDFrontCopy"=>isset($data_raw->strReceiverIDFrontCopy)?cleanValue($data_raw->strReceiverIDFrontCopy):null,
-    "ConsigneeIDBackCopy"=>isset($data_raw->strReceiverIDBackCopy)?cleanValue($data_raw->strReceiverIDBackCopy):null,
-    "OrderWeight"=> cleanValue($data_raw->strOrderWeight),
-    "WeightUnit"=> isset($data_raw->strWeightUnit)?cleanValue($data_raw->strWeightUnit):null,
-    "EndDeliveryType"=> isset($data_raw->strEndDelivertyType)?cleanValue($data_raw->strEndDelivertyType):null,
-    "InsuranceTypeCode"=> isset($data_raw->strInsuranceTypeCode)?cleanValue($data_raw->strInsuranceTypeCode):null,
-    "InsuranceExpense"=>isset($data_raw->numInsuranceExpense)?cleanValue($data_raw->numInsuranceExpense):null,
-    "TraceSourceNumber"=> isset($data_raw->strTraceNumber)?cleanValue($data_raw->strTraceNumber):null,
-    "Remarks"=>isset($data_raw->strRemarks)?cleanValue($data_raw->strRemarks):null,
-    "ITEMS"=> getItemsHelper($data_raw->items)
-]
+if($validation_res==1){
 
-);
-
-//call api to get data?
-$data_string = json_encode($data_arr);
-
-$url = "http://sandbox.transrush.com.au/agent/createPickupItem";
-$curl = curl_init($url);
-
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
-curl_setopt($curl, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));  
-
-
-$curl_response = curl_exec($curl);
-
-if ($curl_response === false) {
-    $info = curl_getinfo($curl);
+    //map values
+    $data_arr = array(
+    "Token"=> "TESTC78C-7923-404C-82CF-CD881539123c",
+    "Data"=> [
+        "ShipperOrderNo"=> cleanValue($data_raw->strOrderNo),
+        "ServiceTypeCode"=> cleanValue($data_raw->strServiceTypeCode),
+        "TerminalCode"=> cleanValue($data_raw->strShopCode),
+        "ConsignerName"=> cleanValue($data_raw->strSenderName), 
+        "ConsignerMobile"=> cleanValue($data_raw->strSenderMobile),
+        "ConsignerProvinceName"=>isset($data_raw->strSenderProvinceName)?cleanValue($data_raw->strSenderProvinceName):null,
+        "ConsignerCityName"=>isset($data_raw->strSenderCityName)?cleanValue($data_raw->strSenderCityName):null,
+        "ConsignerAddress"=>isset($data_raw->strSenderAddress)?cleanValue($data_raw->strSenderAddress):null,
+        "ConsignerPostCode"=> isset($data_raw->strSenderPostCode)?cleanValue($data_raw->strSenderPostCode):null,
+        "ItemDeclareCurrency"=> cleanValue($data_raw->strItemCurrency),
+        "ConsigneeName"=> cleanValue($data_raw->strReceiverName),
+        "CountryISO2"=>isset($data_raw->strCountryISO2)?cleanValue($data_raw->strCountryISO2):null,
+        "Province"=> isset($data_raw->strReceiverProvince)?cleanValue($data_raw->strReceiverProvince):null,
+        "City"=> isset($data_raw->strReceiverCity)?cleanValue($data_raw->strReceiverCity):null,
+        "District"=> isset($data_raw->strReceiverDistrict)?cleanValue($data_raw->strReceiverDistrict):null,
+        "ConsigneeStreetDoorNo"=> cleanValue($data_raw->strReceiverDoorNo),
+        "ConsigneeMobile"=> cleanValue($data_raw->strReceiverMobile),
+        "ConsigneeIDNumber"=>isset($data_raw->strReceiverIDNumber)?cleanValue($data_raw->strReceiverIDNumber):null,
+        "ConsigneeIDFrontCopy"=>isset($data_raw->strReceiverIDFrontCopy)?cleanValue($data_raw->strReceiverIDFrontCopy):null,
+        "ConsigneeIDBackCopy"=>isset($data_raw->strReceiverIDBackCopy)?cleanValue($data_raw->strReceiverIDBackCopy):null,
+        "OrderWeight"=> cleanValue($data_raw->strOrderWeight),
+        "WeightUnit"=> isset($data_raw->strWeightUnit)?cleanValue($data_raw->strWeightUnit):null,
+        "EndDeliveryType"=> isset($data_raw->strEndDelivertyType)?cleanValue($data_raw->strEndDelivertyType):null,
+        "InsuranceTypeCode"=> isset($data_raw->strInsuranceTypeCode)?cleanValue($data_raw->strInsuranceTypeCode):null,
+        "InsuranceExpense"=>isset($data_raw->numInsuranceExpense)?cleanValue($data_raw->numInsuranceExpense):null,
+        "TraceSourceNumber"=> isset($data_raw->strTraceNumber)?cleanValue($data_raw->strTraceNumber):null,
+        "Remarks"=>isset($data_raw->strRemarks)?cleanValue($data_raw->strRemarks):null,
+        "ITEMS"=> getItemsHelper($data_raw->items)
+    ]
+    
+    );
+    
+    //call api to get data?
+    $data_string = json_encode($data_arr);
+    
+    $url = "http://sandbox.transrush.com.au/agent/createPickupItem";
+    $curl = curl_init($url);
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));  
+    
+    
+    $curl_response = curl_exec($curl);
+    
+    if ($curl_response === false) {
+        $info = curl_getinfo($curl);
+        curl_close($curl);
+        die('error occured during curl exec. Additioanl info: ' . var_export($info));
+    }
+    
     curl_close($curl);
-    die('error occured during curl exec. Additioanl info: ' . var_export($info));
+    
+    $decoded_response = json_decode($curl_response);
+    
+    if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
+        die('error occured: ' . $decoded->response->errormessage);
+    }
+    
+    $res_arr = translateResponseMsg($decoded_response->Message,$decoded_response->ResponseCode);
+    
+    $response_arr=array(
+        "orderNumber"=> isset($decoded_response->UnionOrderNumber)?$decoded_response->UnionOrderNumber:null,
+        "resMsg"=>$res_arr['text'],
+        "resCode"=>$res_arr['code'],
+        "TaxAmount"=>isset($decoded_response->TaxAmount)?$decoded_response->UnionOrderNumber:null,
+        "TaxCurrencyCode"=>isset($decoded_response->CurrencyCodeTax)?$decoded_response->CurrencyCodeTax:null
+    );
+    
+    $final_response = json_encode($response_arr);
+    
+    echo $final_response;
 }
+else if($validation_res == 2){
+    $response_arr=array(
+        "resCode" => "2",
+        "resMsg" => "your account is not authorized, please contact XXX-XXXX-XXX"
+    );
 
-curl_close($curl);
-
-$decoded_response = json_decode($curl_response);
-
-if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
-    die('error occured: ' . $decoded->response->errormessage);
+    $final_response = json_encode($response_arr);
+    
+    echo $final_response;
 }
+else if($validation_res ==3){
+    $response_arr=array(
+        "resCode" => "3",
+        "resMsg" => "your account is inactived, please contact XXX-XXXX-XXX"
+    );
 
-$response_arr=array(
-    "orderNumber"=> $decoded_response->UnionOrderNumber,
-    "message"=>translateResponseMsg($decoded_response->Message,$decoded_response->ResponseCode),
-    "TaxAmount"=>$decoded_response->TaxAmount,
-    "TaxCurrencyCode"=>$decoded_response->CurrencyCodeTax
-);
-
-$final_response = json_encode($response_arr);
-
-echo $final_response;
-
+    $final_response = json_encode($response_arr);
+    
+    echo $final_response;
+}
