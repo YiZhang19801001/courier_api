@@ -86,6 +86,16 @@ class User{
         $this->name = htmlspecialchars(strip_tags($this->name));
         $this->address = htmlspecialchars(strip_tags($this->address));
 
+        if($this->IsEmptyOrNull($this->name) || $this->IsEmptyOrNull($this->address))
+        {
+            return false;
+        }
+
+        if($this->findExist())
+        {
+            return true;
+        }
+        
         //Bind data
         $stmt->bindParam(':branchId',$this->branchId);
         $stmt->bindParam(':name',$this->name);
@@ -103,6 +113,36 @@ class User{
         return false;
     }
 
+    private function IsEmptyOrNull($str){
+        return !isset($str) || empty($str) || trim($str)==='';
+    }
 
+    private function findExist(){
+        //create query
+        $query = 'SELECT * FROM '.$this->table. ' WHERE name = ? && address = ?';
 
+        //Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Bind Param
+        $stmt->bindParam(1,$this->name);
+        $stmt->bindParam(2,$this->address);
+    
+        //Execute query
+        $stmt->execute();
+
+        $num = $stmt->rowCount();
+
+        if($num == 0)
+        {
+            return false;
+        }
+        else
+        {
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            $this->branchId = $user['branchId'];
+            $this->branchKey = $user['branchKey'];
+            return true;
+        }
+    }
 }

@@ -72,6 +72,13 @@
       <p>http://~/api/token.php</p>
     </div>
     <div class="container">
+      <p class="text-primary h6">
+        if record with same name & address already exist in database, return the
+        exist branchId and branchKey without create a new row in database.
+      </p>
+    </div>
+    <div class="container">
+      <h3>Example</h3>
       <h5>request body</h5>
       <code> { "name":"shop1", "address":"some address" } </code>
       <h5>response body</h5>
