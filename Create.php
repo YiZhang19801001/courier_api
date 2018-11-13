@@ -5,6 +5,9 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
+include_once './config/Database.php';
+include_once './models/User.php';
+
 function getItemsHelper($arr_item){
     $list_items = array();
     foreach ($arr_item as $item) {
@@ -27,8 +30,6 @@ function getItemsHelper($arr_item){
 function cleanValue($value){
     return htmlspecialchars(strip_tags($value));
 }
-
-
 
 function translateResponseMsg($msg,$code){
     switch ($code) {
@@ -143,22 +144,17 @@ function translateResponseMsg($msg,$code){
 //get raw posted data
 $data_raw = json_decode(file_get_contents("php://input"));
 
+
 //validate user
-$shop_id = $data_raw->branchId;
-$shop_key = $data_raw->branchKey;
-// todo:: valide with DB data
-$validation_res = 2;
-if($shop_id == "SHOP111" && $shop_key = "123456")
-{
-    $validation_res = 1;
-}
-else if($shop_id == "SHOP333" && $shop_key = "123456")
-{
-    $validation_res = 3;
-}
-else{
-    $validation_res =2;
-}
+$branch_id = isset($data_raw->branchId)?$data_raw->branchId:null;
+$branch_key = isset($data_raw->branchKey)?$data_raw->branchKey:null;
+// valide with DB data
+//instantiate DB & connect
+$database = new Database();
+$db = $database->connect();
+//call model method to validation
+$user = new User($db);
+$validation_res = $user->find($branch_id,$branch_key);
 
 if($validation_res==1){
 
