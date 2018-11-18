@@ -113,6 +113,7 @@ class User{
         return false;
     }
 
+    /** private helper method */
     private function IsEmptyOrNull($str){
         return !isset($str) || empty($str) || trim($str)==='';
     }

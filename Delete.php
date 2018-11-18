@@ -28,7 +28,7 @@ $validation_res = $user->find($branch_id,$branch_key);
 
 $courior_name = isset($data_raw->strProviderCode)?$data_raw->strProviderCode:'4PX';
 
-$courier = new Courier($courior_name,2,$db);
+$courier = new Courier($courior_name,3,$db);
 
 $response_arr=array();
 
@@ -37,7 +37,7 @@ if($validation_res==1)
     //map values
     $data_arr = array(
     "Token"=> $courier->getApiKey(),
-    "Data"=> ["ShipperOrderNo"=>isset($data_raw->strOrderNo)?$Helper->cleanValue($data_raw->strOrderNo):null]
+    "Data"=> ["ReferenceNumber"=>isset($data_raw->strOrderNo)?$Helper->cleanValue($data_raw->strOrderNo):null]
     );
 
     //call api to get data?
@@ -71,10 +71,9 @@ if($validation_res==1)
     $res_arr = $courier->makeResponseMsg($decoded_response->ResponseCode);
 
     $response_arr=array(
-        "orderNumber"=> isset($decoded_response->Data->ShipperOrderNo)?$decoded_response->Data->ShipperOrderNo:null,
+        "orderNumber"=> isset($data_raw->strOrderNo)?$Helper->cleanValue($data_raw->strOrderNo):null,
         "resMsg"=>$res_arr['text'],
         "resCode"=>$res_arr['code'],
-        "TrackingList"=>isset($decoded_response->Data->TrackingList)?$Helper->getTrackingListHelper($decoded_response->Data->TrackingList):null
     );
 }
 else if($validation_res == 2){

@@ -39,6 +39,9 @@
             <a class="nav-link" href="/api/introduction/info_trace.php">TRACK</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/api/introduction/info_delete.php">DELETE</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/api/introduction/info_token.php">TOKEN</a>
           </li>
           <li class="nav-item dropdown">

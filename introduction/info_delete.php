@@ -2,21 +2,24 @@
 
     <div class="container">
       <h2>Web API URL</h2>
-      <p>http://~/api/trace.php</p>
+      <p>http://~/api/delete.php</p>
     </div>
     <div class="container">
       <h5>request body</h5>
       <code>
-        { "branchId":"SHOP111", "branchKey":"123456",
-        "strOrderNo":"TESDF181111-101000" }
+{
+	"branchId":"SHOP111",
+	"branchKey":"123456",
+    "strOrderNo": "tes0zz123qzzfqz001"
+}
       </code>
       <h5>response body</h5>
       <code>
-        { "orderNumber": "TESDF181111-101000", "resMsg": "Order Successfully
-        Created, Please Save your order number for further service refferences",
-        "resCode": "0", "TrackingList": [ { "location": "墨尔本", "time":
-        "2018-11-11 09:37:51", "status": "The goods have been taken from the
-        sender" } ] }
+{
+    "orderNumber": "tes0zz123qzzfqz001",
+    "resMsg": "Success! Order Deleted!",
+    "resCode": "0"
+}
       </code>
     </div>
     <div class="container col-12 mt-5">
@@ -53,7 +56,7 @@
             <th>strOrderNo</th>
             <td>C(50)</td>
             <td>the number which is used to create delivery mission</td>
-            <td>TEST20DZS9Z2001</td>
+            <td>tes0zz123qzzfqz001</td>
           </tr>
         </tbody>
       </table>
@@ -73,26 +76,20 @@
           <tr>
             <th colspan="2">orderNumber</th>
             <td>the number which is used to create delivery mission</td>
-            <td>TEST20DZS9Z2001</td>
+            <td>tes0zz123qzzfqz001</td>
+          </tr>
+
+          <tr>
+            <th colspan="2">resMsg</th>
+            <td>message to describe request response</td>
+            <td>Success! Order Deleted!</td>
           </tr>
           <tr>
-            <th rowspan="3">TrackingList(this is an array)</th>
-            <th>location</th>
-            <td>each tracking point city name</td>
-            <td>墨尔本</td>
-          </tr>
-          <tr>
-            <th>time</th>
-            <td>time for this event</td>
-            <td>2018-11-08 11:13:44</td>
-          </tr>
-          <tr>
-            <th>status</th>
-            <td>what happen in this point</td>
-            <td>The goods have been taken from the sender</td>
-          </tr>
+            <th colspan="2">resCode</th>
+            <td>a code which is used to indicate the request response</td>
+            <td>'0'=>'Success','1'=>fail</td>
+          </tr>          
         </tbody>
       </table>
     </div>
 <?php include_once('./inc/footer.php') ?>
-
