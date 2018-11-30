@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2018-11-30 02:11:35
+-- 生成日期： 2018-11-28 00:28:42
 -- 服务器版本： 10.1.36-MariaDB
 -- PHP 版本： 7.2.11
 
@@ -40,9 +40,9 @@ CREATE TABLE `api_urls` (
 --
 
 INSERT INTO `api_urls` (`id`, `courier_code`, `request_type`, `request_url`) VALUES
-(1, '4PX', 1, 'http://www.transrush.com.au/agent/createPickupItem'),
-(2, '4PX', 2, 'http://www.transrush.com.au/Agent/getTrack'),
-(3, '4PX', 3, 'http://www.transrush.com.au/Agent/deleteItem');
+(1, '4PX', 1, 'http://sandbox.transrush.com.au/agent/createPickupItem'),
+(2, '4PX', 2, 'http://sandbox.transrush.com.au/Agent/getTrack'),
+(3, '4PX', 3, 'http://sandbox.transrush.com.au/Agent/deleteItem');
 
 -- --------------------------------------------------------
 
@@ -61,8 +61,7 @@ CREATE TABLE `couriers` (
 --
 
 INSERT INTO `couriers` (`code`, `api_key`, `name`) VALUES
-('4PX', 'CPID01A-6732-0518-18AM-8221A963BEE4', 'si fang ji tuan'),
-('4PX_test', 'TESTC78C-7923-404C-82CF-CD881539123c', 'si fang ji tuan ce shi yong');
+('4PX', 'TESTC78C-7923-404C-82CF-CD881539123c', 'si fang ji tuan');
 
 -- --------------------------------------------------------
 
