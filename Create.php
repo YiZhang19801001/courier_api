@@ -62,7 +62,7 @@ if($validation_res==1){
         "OrderWeight"=> isset($data_raw->strOrderWeight)?$Helper->cleanValue($data_raw->strOrderWeight):null,
         "WeightUnit"=> isset($data_raw->strWeightUnit)?$Helper->cleanValue($data_raw->strWeightUnit):null,
         "EndDeliveryType"=> isset($data_raw->strEndDelivertyType)?$Helper->cleanValue($data_raw->strEndDelivertyType):null,
-        "InsuranceTypeCode"=> isset($data_raw->strInsuranceTypeCode)?$Helper->cleanValue($data_raw->strInsuranceTypeCode):null,
+        "InsuranceTypeCode"=> isset($data_raw->strInsuranceTypeCode)?$Helper->cleanValue($data_raw->strInsuranceTypeCode):"",
         "InsuranceExpense"=>isset($data_raw->numInsuranceExpense)?$Helper->cleanValue($data_raw->numInsuranceExpense):null,
         "TraceSourceNumber"=> isset($data_raw->strTraceNumber)?$Helper->cleanValue($data_raw->strTraceNumber):null,
         "Remarks"=>isset($data_raw->strRemarks)?$Helper->cleanValue($data_raw->strRemarks):null,
@@ -101,7 +101,7 @@ if($validation_res==1){
     $res_arr = $courier->makeResponseMsg($decoded_response->ResponseCode);
     
     $response_arr=array(
-        "orderNumber"=> isset($decoded_response->UnionOrderNumber)?$decoded_response->UnionOrderNumber:null,
+        "orderNumber"=> isset($decoded_response->Data)?$decoded_response->Data:null,
         "resMsg"=>$res_arr['text'],
         "resCode"=>$res_arr['code'],
         "TaxAmount"=>isset($decoded_response->TaxAmount)?$decoded_response->UnionOrderNumber:null,
