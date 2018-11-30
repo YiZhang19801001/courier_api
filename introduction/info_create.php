@@ -15,7 +15,7 @@
             "branchKey":"123456",
             "strOrderNo": "tes017fezq8f2001",
             "strServiceTypeCode": "EC",
-            "strShopCode": " MPX01",
+            "strShopCode": " 2023",
             "strSenderName": "王哈哈",
             "strSenderMobile": "16987654321",
             "strReceiverName": "小明",
