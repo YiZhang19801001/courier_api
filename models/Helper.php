@@ -1,4 +1,5 @@
 <?php
+
 class Helper{
     //Constructor with DB
     // public function __construct($db){
@@ -94,5 +95,69 @@ class Helper{
             default:
                 return "unkown status";
     }
+
 }
+    public function getAuexToken(){
+        $url = "http://aueapi.auexpress.com/api/token";
+        // 登录ID：2742
+        // 密码：A09062742
+        $member_id = "2742";
+        $password = "A09062742";
+
+
+        $data_arr = array("member_id"=>$member_id,"password"=>$password);
+
+        $data_string = json_encode($data_arr);
+        
+        $curl = curl_init($url);
+        
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));  
+        
+        $curl_response = curl_exec($curl);
+        
+        curl_close($curl);
+
+        return $curl_response->Token;
+    }
+
+    public function CQCHSCreateString($data){
+        $receiverAddress = $data->strReceiverProvince.$strReceiverProvince.$strReceiverDistrict.$strReceiverDoorNo;
+        $stock = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>";
+        $stock.="<ydjbxx>";
+        $stock.="<chrusername>0104</chrusername>";
+        $stock.="<chrstockcode>au</chrstockcode>";
+        $stock.="<chrpassword>123456</chrpassword>";
+        // $stock.="<chryyrmc>2082</chryyrmc>";
+        // $stock.="<chrzydhm>160-91239396</chrzydhm>";
+        // $stock.="<chrhbh>CX110/CX052</chrhbh>";
+        // $stock.="<chrjckrq>2015-06-25</chrjckrq>";       
+        $stock.="<chrzl>$data->strWeightUnit</chrzl>";
+        $stock.="<chrsjr>$data->strReceiverName</chrsjr>";
+        $stock.="<chrsjrdz>$receiverAddress</chrsjrdz>";
+        $stock.="<chrsjrdh>$data->strReceiverMobile</chrsjrdh>";
+        $stock.="<chrjjr>$data->strSenderName</chrjjr>";
+        $stock.="<chrjjrdh>$data->strSenderMobile</chrjjrdh>";       
+        $stock.="<chrsfzhm>352227198407180525</chrsfzhm>";
+        $stock.="<ydhwxxlist>";
+        $stock.="<ydhwxx>";
+        $stock.=$this->CQCHSItemList($data);
+        $stock.="</ydhwxx>";
+        $stock.="</ydhwxxlist>";      
+        $stock.="</ydjbxx>";
+    }
+
+    private function CQCHSItemList($data){
+        $list_items_string="";
+        foreach ($data->items as $item) {
+            $list_item .= "<chrpm>$item->strItemName</chrpm>";
+            $list_item .= "<chrpp>$item->strItemBrand</chrpp>";
+            $list_item .= "<chrggxh>$item->strItemSpecifications</chrggxh>";
+            $list_item .= "<chrjz>$item->numItemUnitPrice</chrjz>";
+            $list_item .= "<chrjs>$item->numItemQuantity</chrjs>";
+        }
+        return $list_items_string;
+    }
 }
