@@ -103,12 +103,12 @@ if($validation_res==1)
             $json_obj = json_decode($json_string);
             
 
-
+            $flag = json_encode($json_obj->kdgsname);
             $response_arr=array(
                 "orderNumber"=> $json_obj->fydh,
-                "resMsg"=>count(isset($json_obj->Logisticsback))==0?"order not found":"order found",
-                "resCode"=>count($json_obj->Logisticsback)==0?"1":"0",
-                "TrackingList"=>count($json_obj->Logisticsback)>0?$Helper->getTrackingListCQCHS($json_obj->Logisticsback,$json_obj->kdgsname):""
+                "resMsg"=>$flag=="{}"?"order not found":"order found",
+                "resCode"=>$flag=="{}"?"1":"0",
+                "TrackingList"=>$flag!="{}"?$Helper->getTrackingListCQCHS($json_obj->Logisticsback,$json_obj->kdgsname):""
             );
 
             
