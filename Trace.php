@@ -106,9 +106,9 @@ if($validation_res==1)
             
             $response_arr=array(
                 "orderNumber"=> $json_obj->fydh,
-                "resMsg"=>isset($json_obj->Logisticsback)?"order not found":"order found",
-                "resCode"=>isset($json_obj->Logisticsback)?"1":"0",
-                "TrackingList"=>!isset($json_obj->Logisticsback)?$Helper->getTrackingListCQCHS($json_obj->Logisticsback,$json_obj->kdgsname):""
+                "resMsg"=>!isset($json_obj->Logisticsback)?"order not found":"order found",
+                "resCode"=>!isset($json_obj->Logisticsback)?"1":"0",
+                "TrackingList"=>isset($json_obj->Logisticsback)?$Helper->getTrackingListCQCHS($json_obj->Logisticsback,$json_obj->kdgsname):""
             );
 
             
