@@ -167,10 +167,11 @@ class Helper{
 
     public function getTrackingListCQCHS($data,$kdgsname){
         $formated_list = array();
-        if($kdgsname!="" && $kdgname!=null){
+        $flag = json_encode($kdgsname);
+        if($flag!="{}"){
             foreach ($data as $list_item) {
                     $new_node=array();
-                    $new_node['location'] = $kdgname;
+                    $new_node['location'] = "";
                     $new_node['time'] = $list_item->time;
                     $new_node['status'] = $list_item->ztai;
                     array_push($formated_list,$new_node);
@@ -179,7 +180,7 @@ class Helper{
         else
         {
             $new_node=array();
-            $new_node['location']='';
+            $new_node['location']="";
             $new_node['time']=$data->time;
             $new_node['status']=$data->ztai;
             array_push($formated_list,$new_node);    
