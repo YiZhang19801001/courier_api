@@ -124,9 +124,10 @@ class Helper{
     }
 
     public function CQCHSCreateString($data){
-        $receiverAddress = $data->strReceiverProvince.$strReceiverProvince.$strReceiverDistrict.$strReceiverDoorNo;
-        $stock = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>";
-        $stock.="<ydjbxx>";
+        $wsdl   = "http://www.zhonghuan.com.au:8085/API/cxf/au/recordservice?wsdl";
+        $client = new SoapClient($wsdl, array('trace'=>1));
+        $receiverAddress = $data->strReceiverProvince.$data->strReceiverProvince.$data->strReceiverDistrict.$data->strReceiverDoorNo;
+        $stock ="<ydjbxx>";
         $stock.="<chrusername>0104</chrusername>";
         $stock.="<chrstockcode>au</chrstockcode>";
         $stock.="<chrpassword>123456</chrpassword>";
@@ -134,7 +135,7 @@ class Helper{
         // $stock.="<chrzydhm>160-91239396</chrzydhm>";
         // $stock.="<chrhbh>CX110/CX052</chrhbh>";
         // $stock.="<chrjckrq>2015-06-25</chrjckrq>";       
-        $stock.="<chrzl>$data->strWeightUnit</chrzl>";
+        $stock.="<chrzl>$data->strOrderWeight</chrzl>";
         $stock.="<chrsjr>$data->strReceiverName</chrsjr>";
         $stock.="<chrsjrdz>$receiverAddress</chrsjrdz>";
         $stock.="<chrsjrdh>$data->strReceiverMobile</chrsjrdh>";
@@ -147,16 +148,19 @@ class Helper{
         $stock.="</ydhwxx>";
         $stock.="</ydhwxxlist>";      
         $stock.="</ydjbxx>";
+
+
+        return $stock;
     }
 
     private function CQCHSItemList($data){
         $list_items_string="";
         foreach ($data->items as $item) {
-            $list_item .= "<chrpm>$item->strItemName</chrpm>";
-            $list_item .= "<chrpp>$item->strItemBrand</chrpp>";
-            $list_item .= "<chrggxh>$item->strItemSpecifications</chrggxh>";
-            $list_item .= "<chrjz>$item->numItemUnitPrice</chrjz>";
-            $list_item .= "<chrjs>$item->numItemQuantity</chrjs>";
+            $list_items_string .= "<chrpm>$item->strItemName</chrpm>";
+            $list_items_string .= "<chrpp>$item->strItemBrand</chrpp>";
+            $list_items_string .= "<chrggxh>$item->strItemSpecifications</chrggxh>";
+            $list_items_string .= "<chrjz>$item->numItemUnitPrice</chrjz>";
+            $list_items_string .= "<chrjs>$item->numItemQuantity</chrjs>";
         }
         return $list_items_string;
     }

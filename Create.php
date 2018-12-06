@@ -13,7 +13,7 @@ include_once './models/Helper.php';
 
 $Helper = new Helper;
 
-echo $Helper->getAuexToken();
+
 //get raw posted data
 $data_raw = json_decode(file_get_contents("php://input"));
 
@@ -31,15 +31,15 @@ $validation_res = $user->find($branch_id,$branch_key);
 
 
 
-$courior_name = isset($data_raw->strProviderCode)?$data_raw->strProviderCode:'4PX';
+$courier_name = isset($data_raw->strProviderCode)?$data_raw->strProviderCode:'4PX';
 
-$courier = new Courier($courior_name,1,$db);
 
 $response_arr=array();
 
 if($validation_res==1){
     if($courier_name=='4PX')
     {
+        $courier = new Courier($courier_name,1,$db);
         $curl_response = $courier->callApi($data_raw);
         $decoded_response = json_decode($curl_response);
 
@@ -59,11 +59,43 @@ if($validation_res==1){
     }
     else if($courier_name=='CQCHS')
     {
-        $soap_client= new SoapClient("http://www.zhonghuan.com.au:8085/API/cxf/au/recordservice?wsdl");
+        //$soap_client= new SoapClient("http://www.zhonghuan.com.au:8085/API/cxf/au/recordservice?wsdl");
+
 
         $stock = $Helper->CQCHSCreateString($data_raw);
-             
-        $final_response = $soap_client->getRecord($stock);
+
+        
+
+        $wsdl   = "http://www.zhonghuan.com.au:8085/API/cxf/au/recordservice?wsdl";
+        $client = new SoapClient($wsdl, array('trace'=>1));
+
+        $request_param = array(
+        "stock" => $stock
+        );
+
+        
+        try
+        {
+            $response_string = json_encode($client->getRecord($request_param));
+            $response_json = json_decode($response_string);
+
+        //$responce_param =  $client->call("webservice_methode_name", $request_param); // Alternative way to call soap method
+
+            $response_arr=array(
+                "orderNumber"=> $response_json->return->chrfydh,
+                "resMsg"=>$response_json->return->backmsg,
+                "resCode"=>$response_json->return->msgtype==="200"?"0":"1",
+                "TaxAmount"=>"",
+                "TaxCurrencyCode"=>""
+            );
+        } 
+        catch (Exception $e) 
+        { 
+            echo "<h2>Exception Error!</h2>"; 
+            echo $e->getMessage(); 
+        }
+
+
     }
 }
 else if($validation_res == 2){
