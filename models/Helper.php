@@ -165,14 +165,24 @@ class Helper{
         return $list_items_string;
     }
 
-    public function getTrackingListCQCHS($data){
+    public function getTrackingListCQCHS($data,$kdgsname){
         $formated_list = array();
-        foreach ($data as $list_item) {
+        if($kdgsname!="" && $kdgname!=null){
+            foreach ($data as $list_item) {
+                    $new_node=array();
+                    $new_node['location'] = $kdgname;
+                    $new_node['time'] = $list_item->time;
+                    $new_node['status'] = $list_item->ztai;
+                    array_push($formated_list,$new_node);
+                }
+        }
+        else
+        {
             $new_node=array();
-            $new_node['location'] = "";
-            $new_node['time'] = $list_item->time;
-            $new_node['status'] = $list_item->ztai;
-            array_push($formated_list,$new_node);
+            $new_node['location']='';
+            $new_node['time']=$data->time;
+            $new_node['status']=$data->ztai;
+            array_push($formated_list,$new_node);    
         }
         return $formated_list;
     }

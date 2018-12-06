@@ -4,7 +4,8 @@ $wsdl   = "http://www.zhonghuan.com.au:8085/API/cxf/common/logisticsservice?wsdl
 $client = new SoapClient($wsdl, array('trace'=>1));  // The trace param will show you errors stack
 
 $request_param = array(
-    "fydh" => "970000336957",
+    "fydh" => "970000718135",
+    //"fydh"=>"9700007181",
     "countrytype"=>"au"
 );
 
@@ -23,19 +24,19 @@ try
     $array = json_decode($json);
 
 
-    $formated_list = array();
-    foreach ($array->Logisticsback as $list_item) {
-        $new_node=array();
-        $new_node['location'] = "";
-        $new_node['time'] = $list_item->time;
-        $new_node['status'] = $list_item->ztai;
-        array_push($formated_list,$new_node);
-    }
+    // $formated_list = array();
+    // foreach ($array->Logisticsback as $list_item) {
+    //     $new_node=array();
+    //     $new_node['location'] = "";
+    //     $new_node['time'] = $list_item->time;
+    //     $new_node['status'] = $list_item->ztai;
+    //     array_push($formated_list,$new_node);
+    // }
 
 
-    var_dump($formated_list);
+    // var_dump($formated_list);
 
-
+var_dump($array);
 echo "<br/>";
 } 
 catch (Exception $e) 

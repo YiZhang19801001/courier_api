@@ -102,12 +102,16 @@ if($validation_res==1)
             $json_string = json_encode($xml);
             $json_obj = json_decode($json_string);
             
+
+
             $response_arr=array(
                 "orderNumber"=> $json_obj->fydh,
-                "resMsg"=>$json_obj->kdgsname==""?"order not found":"order found",
-                "resCode"=>$json_obj->kdgsname==""?"1":"0",
-                "TrackingList"=>$json_obj->kdgsname!=""?$Helper->getTrackingListCQCHS($json_obj->Logisticsback):""
+                "resMsg"=>count(isset($json_obj->Logisticsback))==0?"order not found":"order found",
+                "resCode"=>count($json_obj->Logisticsback)==0?"1":"0",
+                "TrackingList"=>count($json_obj->Logisticsback)>0?$Helper->getTrackingListCQCHS($json_obj->Logisticsback,$json_obj->kdgsname):""
             );
+
+            
         } 
         catch (Exception $e) 
         { 
