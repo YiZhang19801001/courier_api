@@ -1,4 +1,4 @@
-<?php include_once('./inc/header.php') ?>
+<?php include_once './inc/header.php'?>
     <div class="container">
         <h2>Web API URL</h2>
         <p>http://~/api/create.php</p>
@@ -113,14 +113,14 @@
                     }
                     ]
                 }
-    
+
                 </code>
         <h5>Response</h5>
         <code>
             {
             "resCode": "3",
             "resMsg": "your account is inactived, please contact XXX-XXXX-XXX"
-            }   
+            }
         </code>
     </div>
     <div class="container col-12 mt-5">
@@ -155,7 +155,7 @@
                     <td>strProviderCode</td>
                     <td>C(11)</td>
                     <td>快递公司编码</td>
-                    <td>4PX-四方, AUEX-澳邮集团</td>
+                    <td>4PX-四方, CQCHS-重庆中环, AUEX-澳邮集团</td>
                 </tr>
                 <tr class="table-primary">
                     <th colspan="2" scope="row">1</th>
@@ -444,4 +444,4 @@
     </div>
 
 
-<?php include_once('./inc/footer.php') ?>
+<?php include_once './inc/footer.php'?>

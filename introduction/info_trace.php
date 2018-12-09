@@ -1,4 +1,4 @@
-<?php include_once('./inc/header.php') ?>
+<?php include_once './inc/header.php'?>
 
     <div class="container">
       <h2>Web API URL</h2>
@@ -7,7 +7,7 @@
     <div class="container">
       <h5>request body</h5>
       <code>
-        { "branchId":"SHOP111", "branchKey":"123456",
+        { "branchId":"SHOP111", "branchKey":"123456","strProviderCode":"4PX",
         "strOrderNo":"TESDF181111-101000" }
       </code>
       <h5>response body</h5>
@@ -47,7 +47,7 @@
             <td>strProviderCode</td>
             <td>C(11)</td>
             <td>快递公司编码</td>
-            <td>4PX-四方, AUEX-澳邮集团(现阶段可不填，默认为4PX)</td>
+            <td>4PX-四方, AUEX-澳邮集团,CQCHS-重庆中环,(默认为4PX)</td>
           </tr>
           <tr class="table-primary">
             <th>strOrderNo</th>
@@ -94,5 +94,5 @@
         </tbody>
       </table>
     </div>
-<?php include_once('./inc/footer.php') ?>
+<?php include_once './inc/footer.php'?>
 

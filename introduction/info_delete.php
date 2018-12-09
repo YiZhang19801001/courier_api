@@ -1,4 +1,4 @@
-<?php include_once('./inc/header.php') ?>
+<?php include_once './inc/header.php'?>
 
     <div class="container">
       <h2>Web API URL</h2>
@@ -50,7 +50,7 @@
             <td>strProviderCode</td>
             <td>C(11)</td>
             <td>快递公司编码</td>
-            <td>4PX-四方, AUEX-澳邮集团(现阶段可不填，默认为4PX)</td>
+            <td>4PX-四方, AUEX-澳邮集团(现阶段可不填，默认为4PX,!!重庆中环无此服务)</td>
           </tr>
           <tr class="table-primary">
             <th>strOrderNo</th>
@@ -88,8 +88,8 @@
             <th colspan="2">resCode</th>
             <td>a code which is used to indicate the request response</td>
             <td>'0'=>'Success','1'=>fail</td>
-          </tr>          
+          </tr>
         </tbody>
       </table>
     </div>
-<?php include_once('./inc/footer.php') ?>
+<?php include_once './inc/footer.php'?>
