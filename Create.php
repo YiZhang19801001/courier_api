@@ -51,7 +51,7 @@ if($validation_res==1){
     
         $response_arr=array(
             "orderNumber"=> isset($decoded_response->Data)?$decoded_response->Data:null,
-            "resMsg"=>$res_arr['text'],
+            "resMsg"=>$decoded_response->Message,
             "resCode"=>$res_arr['code'],
             "TaxAmount"=>isset($decoded_response->TaxAmount)?$decoded_response->UnionOrderNumber:null,
             "TaxCurrencyCode"=>isset($decoded_response->CurrencyCodeTax)?$decoded_response->CurrencyCodeTax:null
