@@ -1,1 +1,53 @@
-{}
+[
+    {
+        "time": "2018-12-18 22:25:06",
+        "process": "before decode",
+        "request_body": "{\n    \"branchId\": \"SHOP111\",\n    \"branchKey\": \"123456\",\n    \"strProviderCode\": \"CQCHS\",\n    \"strOrderNo\": \"01041172\",\n    \"strServiceTypeCode\": \"\",\n    \"strShopCode\": \"0104\",\n    \"strSenderName\": \"06250134.\u65bd\u6069\u5988\u5988\",\n    \"strSenderMobile\": \"89648377\",\n    \"strSenderProvinceName\": \"\",\n    \"strSenderCityName\": \"\",\n    \"strSenderAddress\": \"\",\n    \"strSenderPostCode\": \"\",\n    \"strItemCurrency\": \"AUD\",\n    \"strReceiverName\": \"\u80e1\u5de7\",\n    \"strCountryISO2\": \"\",\n    \"strReceiverProvince\": \"\",\n    \"strReceiverCity\": \"\",\n    \"strReceiverDistrict\": \"\",\n    \"strReceiverDoorNo\": \"\u5e7f\u4e1c\u7701 \u6df1\u5733\u5e02 \u5b9d\u5b89\u533a \u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u5b9d\u5b89\u533a \u77f3\u5ca9\u8857\u9053\u5b98\u7530\u8001\u6751216\u53f7,\",\n    \"strReceiverMobile\": \"13076938915\",\n    \"strReceiverIDNumber\": \"\",\n    \"strReceiverIDFrontCopy\": \"\",\n    \"strReceiverIDBackCopy\": \"\",\n    \"strOrderWeight\": \"0\",\n    \"strWeightUnit\": \"KG\",\n    \"strEndDelivertyType\": \"\",\n    \"strInsuranceTypeCode\": \"N\",\n    \"numInsuranceExpense\": 0,\n    \"strTraceNumber\": \"\",\n    \"strRemarks\": \"\"\n}"
+    },
+    {
+        "time": "2018-12-18 22:25:06",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "01041172",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250134.\u65bd\u6069\u5988\u5988",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u80e1\u5de7",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5e7f\u4e1c\u7701 \u6df1\u5733\u5e02 \u5b9d\u5b89\u533a \u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u5b9d\u5b89\u533a \u77f3\u5ca9\u8857\u9053\u5b98\u7530\u8001\u6751216\u53f7,",
+            "strReceiverMobile": "13076938915",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "0",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": ""
+        }
+    },
+    {
+        "time": "2018-12-18 22:25:08",
+        "response_data": {
+            "orderNumber": "970000736650",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    }
+]

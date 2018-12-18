@@ -34,6 +34,10 @@ try
     //Convert updated array to JSON
     $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
 
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
+
 } catch (Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
 }
@@ -58,6 +62,9 @@ try
 
     //Convert updated array to JSON
     $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
 
 } catch (Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
@@ -174,6 +181,9 @@ try
 
     //Convert updated array to JSON
     $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
 
 } catch (Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";

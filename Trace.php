@@ -11,17 +11,15 @@ include_once './models/Courier.php';
 include_once './models/Helper.php';
 
 $Helper = new Helper;
-
-//get raw posted data
-$data_raw = json_decode(file_get_contents("php://input"));
-
 $myFile = "logger_track.json";
 
 try
 {
     $file_arr_data = array(); // create empty array
+
+    $request_body = file_get_contents("php://input");
     //Get data
-    $formdata = array('time' => date("Y-m-d H:i:s"), 'request_body' => $data_raw);
+    $formdata = array('time' => date("Y-m-d H:i:s"), 'process' => 'before decode', 'request_body' => $request_body);
 
     //Get data from existing json file
     $jsondata = file_get_contents($myFile);
@@ -34,6 +32,38 @@ try
 
     //Convert updated array to JSON
     $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
+
+} catch (Exception $e) {
+    echo 'Caught exception: ', $e->getMessage(), "\n";
+}
+
+//get raw posted data
+$data_raw = json_decode(file_get_contents("php://input"));
+
+try
+{
+    $file_arr_data = array(); // create empty array
+    //Get data
+    $formdata = array('time' => date("Y-m-d H:i:s"), 'process' => 'after decode', 'request_body' => $data_raw);
+
+    //Get data from existing json file
+    $jsondata = file_get_contents($myFile);
+
+    // converts json data into array
+    $file_arr_data = json_decode($jsondata, true);
+
+    // Push user data to array
+    array_push($file_arr_data, $formdata);
+
+    //Convert updated array to JSON
+    $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
 
 } catch (Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
@@ -172,6 +202,9 @@ try
 
     //Convert updated array to JSON
     $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
 
 } catch (Exception $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
