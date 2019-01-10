@@ -36,8 +36,8 @@ class Helper
         $formated_list = array();
         foreach ($trackingList as $list_item) {
             $new_node = array();
-            $new_node['location'] = isset($list_item->TrackLocation) ? $this->cleanValue($list_item->TrackLocation) : null;
-            $new_node['time'] = isset($list_item->TrackTime) ? $this->cleanValue($list_item->TrackTime) : null;
+            $new_node['location'] = isset($list_item->TrackLocation) ? $this->cleanValue($list_item->TrackLocation) : "";
+            $new_node['time'] = isset($list_item->TrackTime) ? $this->cleanValue($list_item->TrackTime) : "";
             $new_node['status'] = $this->translateStatus($list_item->TrackStatusCode);
             array_push($formated_list, $new_node);
         }
@@ -131,7 +131,11 @@ class Helper
     public function CQCHSCreateString($data)
     {
         $wsdl = "http://www.zhonghuan.com.au:8085/API/cxf/au/recordservice?wsdl";
-        $client = new SoapClient($wsdl, array('trace' => 1));
+        try {
+            $client = new SoapClient($wsdl, array('trace' => 1));
+        } catch (\Throwable $th) {
+            echo 'not good';
+        }
         $receiverAddress = $data->strReceiverProvince . $data->strReceiverProvince . $data->strReceiverDistrict . $data->strReceiverDoorNo;
         $stock = "<ydjbxx>";
         $stock .= "<chrusername>0104</chrusername>";
@@ -177,19 +181,21 @@ class Helper
     {
         $formated_list = array();
         $flag = json_encode($kdgsname);
-        if ($flag != "{}") {
+		
+        if (is_array($data)) {
             foreach ($data as $list_item) {
                 $new_node = array();
                 $new_node['location'] = "";
-                $new_node['time'] = $list_item->time;
-                $new_node['status'] = $list_item->ztai;
+                $new_node['time'] = isset($list_item->time) ? $list_item->time : "";
+                $new_node['status'] = isset($list_item->ztai) ? $list_item->ztai : "";
                 array_push($formated_list, $new_node);
             }
         } else {
             $new_node = array();
             $new_node['location'] = "";
-            $new_node['time'] = $data->time;
-            $new_node['status'] = $data->ztai;
+            $new_node['time'] = isset($list_item->time) ? $list_item->time : "";
+            $new_node['status'] = isset($list_item->ztai) ? $list_item->ztai : "";
+
             array_push($formated_list, $new_node);
         }
         return $formated_list;

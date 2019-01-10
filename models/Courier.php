@@ -146,7 +146,7 @@ class Courier
 
                 //call api to get data?
                 $data_string = json_encode($data_arr);
-
+                // die($data_string);
                 $url = $this->getUrl();
                 $curl = curl_init($url);
 
