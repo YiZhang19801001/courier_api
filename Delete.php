@@ -11,9 +11,66 @@ include_once './models/Courier.php';
 include_once './models/Helper.php';
 
 $Helper = new Helper;
+$dateTimeForLogger = $Helper->getDateTime();
+
+$myFile = "./log/delete/logger $dateTimeForLogger->date.json";
+
+try
+{
+
+    $file_arr_data = array(); // create empty array
+
+    $request_body = file_get_contents("php://input");
+    //Get data
+    $formdata = array('time' => $dateTimeForLogger->time, 'process' => 'before decode', 'request_body' => $request_body);
+
+    //Get data from existing json file
+    $jsondata = file_get_contents($myFile);
+
+    // converts json data into array
+    $file_arr_data = json_decode($jsondata, true) !== null ? json_decode($jsondata, true) : [];
+
+    // Push user data to array
+    array_push($file_arr_data, $formdata);
+
+    //Convert updated array to JSON
+    $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
+
+} catch (Exception $e) {
+    echo 'Caught exception: ', $e->getMessage(), "\n";
+}
 
 //get raw posted data
 $data_raw = json_decode(file_get_contents("php://input"));
+
+try
+{
+    $file_arr_data = array(); // create empty array
+    //Get data
+    $formdata = array('time' => $dateTimeForLogger->time, 'process' => 'after decode', 'request_body' => $data_raw);
+
+    //Get data from existing json file
+    $jsondata = file_get_contents($myFile);
+
+    // converts json data into array
+    $file_arr_data = json_decode($jsondata, true);
+
+    // Push user data to array
+    array_push($file_arr_data, $formdata);
+
+    //Convert updated array to JSON
+    $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
+
+} catch (Exception $e) {
+    echo 'Caught exception: ', $e->getMessage(), "\n";
+}
 
 //validate user
 $branch_id = isset($data_raw->branchId) ? $Helper->cleanValue($data_raw->branchId) : null;
@@ -91,5 +148,30 @@ $response_arr = array(
 // }
 
 $final_response = json_encode($response_arr);
+
+try
+{
+    $file_arr_data = array(); // create empty array
+    //Get data
+    $formdata = array('time' => $dateTimeForLogger->time, 'response_data' => $response_arr);
+
+    //Get data from existing json file
+    $jsondata = file_get_contents($myFile);
+
+    // converts json data into array
+    $file_arr_data = json_decode($jsondata, true);
+
+    // Push user data to array
+    array_push($file_arr_data, $formdata);
+
+    //Convert updated array to JSON
+    $jsondata = json_encode($file_arr_data, JSON_PRETTY_PRINT);
+    //save data in log file
+
+    file_put_contents($myFile, $jsondata);
+
+} catch (Exception $e) {
+    echo 'Caught exception: ', $e->getMessage(), "\n";
+}
 
 echo $final_response;
