@@ -44,6 +44,17 @@ class Helper
         return $formated_list;
     }
 
+    public function getDateTime()
+    {
+        $tz = 'Australia/Sydney';
+        $timestamp = time();
+        $dt = new DateTime("now", new DateTimeZone($tz));
+        $dt->setTimestamp($timestamp);
+        $logRowTime = $dt->format('d-m-Y, H:i:s');
+        $logFileDate = $dt->format('d-m-Y');
+        return json_decode(json_encode(array('time' => $logRowTime, 'date' => $logFileDate)));
+    }
+
     private function translateStatus($code)
     {
         switch ($code) {
@@ -181,7 +192,7 @@ class Helper
     {
         $formated_list = array();
         $flag = json_encode($kdgsname);
-		
+
         if (is_array($data)) {
             foreach ($data as $list_item) {
                 $new_node = array();

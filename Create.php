@@ -11,22 +11,24 @@ include_once './models/Courier.php';
 include_once './models/Helper.php';
 
 $Helper = new Helper;
+$dateTimeForLogger = $Helper->getDateTime();
 
-$myFile = "logger.json";
+$myFile = "./log/create/logger $dateTimeForLogger->date.json";
 
 try
 {
+
     $file_arr_data = array(); // create empty array
 
     $request_body = file_get_contents("php://input");
     //Get data
-    $formdata = array('time' => date("Y-m-d H:i:s"), 'process' => 'before decode', 'request_body' => $request_body);
+    $formdata = array('time' => $dateTimeForLogger->time, 'process' => 'before decode', 'request_body' => $request_body);
 
     //Get data from existing json file
     $jsondata = file_get_contents($myFile);
 
     // converts json data into array
-    $file_arr_data = json_decode($jsondata, true);
+    $file_arr_data = json_decode($jsondata, true) !== null ? json_decode($jsondata, true) : [];
 
     // Push user data to array
     array_push($file_arr_data, $formdata);
@@ -49,7 +51,7 @@ try
 {
     $file_arr_data = array(); // create empty array
     //Get data
-    $formdata = array('time' => date("Y-m-d H:i:s"), 'process' => 'after decode', 'request_body' => $data_raw);
+    $formdata = array('time' => $dateTimeForLogger->time, 'process' => 'after decode', 'request_body' => $data_raw);
 
     //Get data from existing json file
     $jsondata = file_get_contents($myFile);
@@ -143,7 +145,7 @@ if ($courier_name == '4PX') {
         // echo $e->getMessage();
     }
 
-}else {
+} else {
     $response_arr = array(
         "orderNumber" => isset($data_raw->strOrderNo) ? $data_raw->strOrderNo : "",
         "resMsg" => "no courier matched, please check your courier name(运输公司名无法匹配，请检查您提交的运输公司名)",
@@ -177,7 +179,7 @@ try
 {
     $file_arr_data = array(); // create empty array
     //Get data
-    $formdata = array('time' => date("Y-m-d H:i:s"), 'response_data' => $response_arr);
+    $formdata = array('time' => $dateTimeForLogger->time, 'response_data' => $response_arr);
 
     //Get data from existing json file
     $jsondata = file_get_contents($myFile);
