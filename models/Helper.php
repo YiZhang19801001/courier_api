@@ -211,4 +211,86 @@ class Helper
         }
         return $formated_list;
     }
+
+    public function AUEXCreateArray($data_raw)
+    {
+        $request_array = array(
+            "OrderId" => isset($data_raw->strOrderNo) ? $this->cleanValue($data_raw->strOrderNo) : "",
+            "MemberId" => 2742,
+            "BrandId" => 1,
+            // "TerminalCode" => isset($data_raw->strShopCode) ? $Helper->cleanValue($data_raw->strShopCode) : null,
+            "SenderName" => isset($data_raw->strSenderName) ? $this->cleanValue($data_raw->strSenderName) : "",
+            "SenderPhone" => isset($data_raw->strSenderMobile) ? $this->cleanValue($data_raw->strSenderMobile) : "",
+            "SenderProvince" => isset($data_raw->strSenderProvinceName) ? $this->cleanValue($data_raw->strSenderProvinceName) : "",
+            "SenderCity" => isset($data_raw->strSenderCityName) ? $this->cleanValue($data_raw->strSenderCityName) : "",
+            "SenderAddr1" => isset($data_raw->strSenderAddress) ? $this->cleanValue($data_raw->strSenderAddress) : "",
+            "SenderPostCode" => isset($data_raw->strSenderPostCode) ? $this->cleanValue($data_raw->strSenderPostCode) : "",
+            // "ItemDeclareCurrency" => isset($data_raw->strItemCurrency) ? $Helper->cleanValue($data_raw->strItemCurrency) : null,
+            "ReceiverName" => isset($data_raw->strReceiverName) ? $this->cleanValue($data_raw->strReceiverName) : "",
+            "ReceiverPhone" => isset($data_raw->strReceiverMobile) ? $this->cleanValue($data_raw->strReceiverMobile) : "",
+            // "CountryISO2" => isset($data_raw->strCountryISO2) ? $Helper->cleanValue($data_raw->strCountryISO2) : null,
+            "ReceiverProvince" => isset($data_raw->strReceiverProvince) ? $this->cleanValue($data_raw->strReceiverProvince) : "",
+            "ReceiverCity" => isset($data_raw->strReceiverCity) ? $this->cleanValue($data_raw->strReceiverCity) : "",
+            // "District" => isset($data_raw->strReceiverDistrict) ? $Helper->cleanValue($data_raw->strReceiverDistrict) : null,
+            "ReceiverAddr1" => isset($data_raw->strReceiverDoorNo) ? $this->cleanValue($data_raw->strReceiverDoorNo) : "",
+            "ReceiverEmail" => "",
+            "ReceiverCountry" => "",
+            "ReceiverPostCode" => "",
+            "ReceiverPhotoId" => isset($data_raw->strReceiverIDNumber) ? $this->cleanValue($data_raw->strReceiverIDNumber) : "",
+            // "ConsigneeIDFrontCopy" => isset($data_raw->strReceiverIDFrontCopy) ? $Helper->cleanValue($data_raw->strReceiverIDFrontCopy) : null,
+            // "ConsigneeIDBackCopy" => isset($data_raw->strReceiverIDBackCopy) ? $Helper->cleanValue($data_raw->strReceiverIDBackCopy) : null,
+            "ChargeWeight" => isset($data_raw->strOrderWeight) ? $this->cleanValue($data_raw->strOrderWeight) : "",
+            // "WeightUnit" => isset($data_raw->strWeightUnit) ? $Helper->cleanValue($data_raw->strWeightUnit) : null,
+            // "EndDeliveryType" => isset($data_raw->strEndDelivertyType) ? $Helper->cleanValue($data_raw->strEndDelivertyType) : null,
+            // "InsuranceTypeCode" => isset($data_raw->strInsuranceTypeCode) ? $Helper->cleanValue($data_raw->strInsuranceTypeCode) : "",
+            // "InsuranceExpense" => isset($data_raw->numInsuranceExpense) ? $Helper->cleanValue($data_raw->numInsuranceExpense) : null,
+            // "TraceSourceNumber" => isset($data_raw->strTraceNumber) ? $Helper->cleanValue($data_raw->strTraceNumber) : null,
+            // "Marks" => isset($data_raw->strRemarks) ? $Helper->cleanValue($data_raw->strRemarks) : "",
+            "ShipmentContent" => $this->getAuexItemsHelper(isset($data_raw->items) ? $data_raw->items : ""),
+            "ShipmentCustomContent" => "",
+            "Value" => "",
+            "IsPaid" => "",
+            "PayTime" => "",
+            "Marks" => "",
+            "Volume" => "",
+            "Notes" => "",
+            "OrderTime" => "",
+            "ShipmentStatus" => "",
+
+        );
+
+        return $request_array;
+    }
+
+    public function getAuexItemsHelper($items)
+    {
+        $content_string = "";
+        if (isset($items) && count($items) > 0) {
+            foreach ($items as $item) {
+                $orderItem = isset($item->strItemName) ? $item->strItemName : "";
+                $quantity = isset($item->numItemQuantity) ? $item->numItemQuantity : "";
+                $newOrderItem = $orderItem . '*' . $quantity;
+                $content_string .= $newOrderItem;
+            }
+        }
+
+        return $content_string;
+
+    }
+
+    public function getAuexTrackingList($trackList)
+    {
+        $formated_list = array();
+        if (count($trackList) > 0) {
+            foreach ($trackList as $trackListItem) {
+                $new_node = array();
+                $new_node['location'] = isset($trackListItem->Location) ? $this->cleanValue($trackListItem->Location) : "";
+                $new_node['time'] = isset($trackListItem->StatusTime) ? $this->cleanValue($trackListItem->StatusTime) : "";
+                $new_node['status'] = isset($trackListItem->StatusDetail) ? $this->cleanValue($trackListItem->StatusDetail) : "";
+
+                array_push($formated_list, $new_node);
+            }
+        }
+        return $formated_list;
+    }
 }

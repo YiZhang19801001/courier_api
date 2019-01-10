@@ -170,6 +170,81 @@ if ($courior_name == '4PX') {
 
     }
 
+} else if ($courior_name == 'AUEX') {
+    $token_data_arr = array("MemberId" => 2742, "Password" => 'A09062742');
+//call api to get data
+    $token_data_string = json_encode($token_data_arr);
+
+    $token_url = 'http://auth.auexpress.com/api/token';
+    $token_curl = curl_init($token_url);
+
+    curl_setopt($token_curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($token_curl, CURLOPT_POST, true);
+    curl_setopt($token_curl, CURLOPT_POSTFIELDS, $token_data_string);
+    curl_setopt($token_curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($token_data_string)));
+
+    $token_curl_response = curl_exec($token_curl);
+
+    if ($token_curl_response === false) {
+        $token_info = curl_getinfo($token_curl);
+        curl_close($token_curl);
+        die('error occured during curl exec. Additioanl info: ' . var_export($token_info));
+    }
+
+    curl_close($token_curl);
+    $token_decoded_response = json_decode($token_curl_response);
+
+    $AUEXTOKEN = $token_decoded_response->Token;
+// die('token' . $AUEXTOKEN);
+    //** get token end */
+
+// die('data_arr:' . json_encode($data_arr));
+    //call api to get data
+
+// die('data_string: ' . $data_string);
+    $AuexOrderId = isset($data_raw->strOrderNo) ? $Helper->cleanValue($data_raw->strOrderNo) : "";
+    $url = 'http://aueapi.auexpress.com/api/ShipmentOrderTrack?OrderId=' . $AuexOrderId;
+    $curl = curl_init($url);
+
+    //die('auex order id: ' . $AuexOrderId);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: ' . 'Bearer ' . $AUEXTOKEN));
+
+    $curl_response = curl_exec($curl);
+
+    // die('response:' . $curl_response);
+
+    if ($curl_response == "") {
+        $response_arr = array(
+            "orderNumber" => isset($data_raw->strOrderNo) ? $Helper->cleanValue($data_raw->strOrderNo) : "",
+            "resMsg" => 'no found',
+            "resCode" => '1',
+            "TrackingList" => [],
+        );
+    } else {
+        if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
+            die('error occured: ' . $decoded->response->errormessage);
+        }
+        $decoded_response = json_decode($curl_response);
+
+        $response_arr = array(
+            "orderNumber" => isset($data_raw->strOrderNo) ? $Helper->cleanValue($data_raw->strOrderNo) : "",
+            "resMsg" => isset($decoded_response->ReturnResult) ? $decoded_response->ReturnResult : "",
+            "resCode" => isset($decoded_response->Code) ? $decoded_response->Code : "",
+            "TrackingList" => isset($decoded_response->TrackList) ? $Helper->getAuexTrackingList($decoded_response->TrackList) : [],
+        );
+
+    }
+
+} else {
+    $response_arr = array(
+        "orderNumber" => isset($data_raw->strOrderNo) ? $data_raw->strOrderNo : "",
+        "resMsg" => "no courier matched, please check your courier name(运输公司名无法匹配，请检查您提交的运输公司名)",
+        "resCode" => 'ERR99999',
+        "TrackingList" => []
+    );
+
 }
 
 // if ($validation_res == 1) {

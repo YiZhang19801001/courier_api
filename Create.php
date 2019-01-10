@@ -145,6 +145,76 @@ if ($courier_name == '4PX') {
         // echo $e->getMessage();
     }
 
+} else if ($courier_name == 'AUEX') {
+//** get token */
+    $token_data_arr = array("MemberId" => 2742, "Password" => 'A09062742');
+    //call api to get data
+    $token_data_string = json_encode($token_data_arr);
+
+    $token_url = 'http://auth.auexpress.com/api/token';
+    $token_curl = curl_init($token_url);
+
+    curl_setopt($token_curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($token_curl, CURLOPT_POST, true);
+    curl_setopt($token_curl, CURLOPT_POSTFIELDS, $token_data_string);
+    curl_setopt($token_curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($token_data_string)));
+
+    $token_curl_response = curl_exec($token_curl);
+
+    if ($token_curl_response === false) {
+        $token_info = curl_getinfo($token_curl);
+        curl_close($token_curl);
+        die('error occured during curl exec. Additioanl info: ' . var_export($token_info));
+    }
+
+    curl_close($token_curl);
+    $token_decoded_response = json_decode($token_curl_response);
+
+    $AUEXTOKEN = $token_decoded_response->Token;
+    // die('token' . $AUEXTOKEN);
+    //** get token end */
+
+    $data_arr = $Helper->AUEXCreateArray($data_raw);
+    // die('data_arr:' . json_encode($data_arr));
+    //call api to get data
+    $data_string = '[' . json_encode($data_arr) . ']';
+
+    // die('data_string: ' . $data_string);
+    $url = 'http://aueapi.auexpress.com/api/AgentShipmentOrder/Create';
+    $curl = curl_init($url);
+
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data_string), 'Authorization: ' . 'Bearer ' . $AUEXTOKEN));
+
+    $curl_response = curl_exec($curl);
+
+    // die('response:' . $curl_response);
+
+    $decoded_response = json_decode($curl_response);
+
+    if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
+        die('error occured: ' . $decoded->response->errormessage);
+    }
+
+    $auex_res_msg = "";
+    if ($decoded_response->Code == 0) {
+        $auex_res_msg = $decoded_response->ReturnResult;
+    } else {
+        $auex_res_msg = $decoded_response->Errors;
+    }
+
+    $response_arr = array(
+        "orderNumber" => isset($data_raw->strOrderNo) ? $data_raw->strOrderNo : "",
+        "resMsg" => $auex_res_msg,
+        "resCode" => $decoded_response->Code,
+        "TaxAmount" => "not availiable for this courier",
+        "TaxCurrencyCode" => "not availiable for this courier",
+    );
+
+    //$response_arr = $data_arr;
+
 } else {
     $response_arr = array(
         "orderNumber" => isset($data_raw->strOrderNo) ? $data_raw->strOrderNo : "",
