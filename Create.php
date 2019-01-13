@@ -9,6 +9,8 @@ include_once './config/Database.php';
 include_once './models/User.php';
 include_once './models/Courier.php';
 include_once './models/Helper.php';
+// Turn off all error reporting
+error_reporting(0);
 
 $Helper = new Helper;
 $dateTimeForLogger = $Helper->getDateTime();

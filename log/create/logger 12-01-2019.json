@@ -1,0 +1,1614 @@
+[
+    {
+        "time": "12-01-2019, 10:42:43",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312371\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"06250125Amanda\",\"strSenderMobile\":\"0289648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u6797\u67a2\u654f\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\u4f5b\u5c71\u5e02\",\"strReceiverCity\":\"\u4f5b\u5c71\u5e02\",\"strReceiverDistrict\":\"\u5357\u6d77\u533a\",\"strReceiverDoorNo\":\"\u5927\u6ca5\u6c34\u5934\u8c2d\u8fb9\u5357\u8def38\u53f7\u78a7\u6842\u56ed\u534e\u4e9a\u5e7f\u573a17\u697c\u97e9\u946b\u91d1\u5c5e\u6709\u9650\u516c\u53f8\",\"strReceiverMobile\":\"13630045893 \",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"1.4\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9400581046328\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7ebd\u4e50 \u91d1\u88c5\u9499 275\u7c92 \u589e\u503c\u7248\", \"numItemQuantity\": \"2\", \"strItemSpecifications\": \"NL0052\", \"numItemUnitPrice\": \"34.98\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 10:42:43",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312371",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "06250125Amanda",
+            "strSenderMobile": "0289648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u6797\u67a2\u654f",
+            "strCountryISO2": "",
+            "strReceiverProvince": "\u4f5b\u5c71\u5e02",
+            "strReceiverCity": "\u4f5b\u5c71\u5e02",
+            "strReceiverDistrict": "\u5357\u6d77\u533a",
+            "strReceiverDoorNo": "\u5927\u6ca5\u6c34\u5934\u8c2d\u8fb9\u5357\u8def38\u53f7\u78a7\u6842\u56ed\u534e\u4e9a\u5e7f\u573a17\u697c\u97e9\u946b\u91d1\u5c5e\u6709\u9650\u516c\u53f8",
+            "strReceiverMobile": "13630045893 ",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "1.4",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9400581046328",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7ebd\u4e50 \u91d1\u88c5\u9499 275\u7c92 \u589e\u503c\u7248",
+                    "numItemQuantity": "2",
+                    "strItemSpecifications": "NL0052",
+                    "numItemUnitPrice": "34.98",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 10:42:43",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "item brand can not be empty  ( \u53c2\u6570\u4e0d\u80fd\u4e3a\u7a7a[ItemBrand] )",
+            "resCode": "ERR12031",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 10:47:01",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412401\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250601MIA\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u738b\u9732\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4\",\"strReceiverMobile\":\"13776416764\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9421902960048\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"A2\u5a74\u513f\u5976\u7c89\u4e8c\u6bb5A\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"A20002\", \"numItemUnitPrice\": \"43.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 10:47:01",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412401",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250601MIA",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u738b\u9732",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4",
+            "strReceiverMobile": "13776416764",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9421902960048",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "A2\u5a74\u513f\u5976\u7c89\u4e8c\u6bb5A",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "A20002",
+                    "numItemUnitPrice": "43.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 10:47:01",
+        "response_data": {
+            "orderNumber": "970000762292",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 10:47:06",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412402\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250601MIA\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u738b\u9732\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4\",\"strReceiverMobile\":\"13776416764\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9421902960048\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"A2\u5a74\u513f\u5976\u7c89\u4e8c\u6bb5A\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"A20002\", \"numItemUnitPrice\": \"43.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 10:47:06",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412402",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250601MIA",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u738b\u9732",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4",
+            "strReceiverMobile": "13776416764",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9421902960048",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "A2\u5a74\u513f\u5976\u7c89\u4e8c\u6bb5A",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "A20002",
+                    "numItemUnitPrice": "43.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 10:47:06",
+        "response_data": {
+            "orderNumber": "970000762293",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 10:48:14",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412411\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250601MIA\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u5c60\u76ca\u840d \",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5357\u4eac\u5e02\u79e6\u6dee\u533a\u56db\u65b9\u5df78\u53f7\u4e09\u91d1\u798f\u90b814\u680b3\u5355\u5143206\u5ba4\",\"strReceiverMobile\":\"13770612962\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9418783003421\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Aptamil\u7231\u4ed6\u7f8e\u767d\u91d1 \u4e09\u6bb5P\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"APT0009\", \"numItemUnitPrice\": \"35.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 10:48:14",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412411",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250601MIA",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u5c60\u76ca\u840d ",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5357\u4eac\u5e02\u79e6\u6dee\u533a\u56db\u65b9\u5df78\u53f7\u4e09\u91d1\u798f\u90b814\u680b3\u5355\u5143206\u5ba4",
+            "strReceiverMobile": "13770612962",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9418783003421",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Aptamil\u7231\u4ed6\u7f8e\u767d\u91d1 \u4e09\u6bb5P",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "APT0009",
+                    "numItemUnitPrice": "35.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 10:48:14",
+        "response_data": {
+            "orderNumber": "970000762294",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 10:48:19",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412412\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250601MIA\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u5c60\u76ca\u840d \",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5357\u4eac\u5e02\u79e6\u6dee\u533a\u56db\u65b9\u5df78\u53f7\u4e09\u91d1\u798f\u90b814\u680b3\u5355\u5143206\u5ba4\",\"strReceiverMobile\":\"13770612962\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9418783003421\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Aptamil\u7231\u4ed6\u7f8e\u767d\u91d1 \u4e09\u6bb5P\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"APT0009\", \"numItemUnitPrice\": \"35.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 10:48:19",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412412",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250601MIA",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u5c60\u76ca\u840d ",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5357\u4eac\u5e02\u79e6\u6dee\u533a\u56db\u65b9\u5df78\u53f7\u4e09\u91d1\u798f\u90b814\u680b3\u5355\u5143206\u5ba4",
+            "strReceiverMobile": "13770612962",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9418783003421",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Aptamil\u7231\u4ed6\u7f8e\u767d\u91d1 \u4e09\u6bb5P",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "APT0009",
+                    "numItemUnitPrice": "35.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 10:48:19",
+        "response_data": {
+            "orderNumber": "970000762295",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 11:10:04",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412351\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u6731\u840d\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u573a\u4e2d\u8def2800\u5f0448\u53f7202\u5ba4\",\"strReceiverMobile\":\"15921882832\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"7.2\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9300639602967\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u5fb7\u8fd0\u5168\u8102\u5976\u7c89 1kg\", \"numItemQuantity\": \"6\", \"strItemSpecifications\": \"Dev0001\", \"numItemUnitPrice\": \"9.5\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 11:10:04",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412351",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u6731\u840d",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u573a\u4e2d\u8def2800\u5f0448\u53f7202\u5ba4",
+            "strReceiverMobile": "15921882832",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "7.2",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9300639602967",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u5fb7\u8fd0\u5168\u8102\u5976\u7c89 1kg",
+                    "numItemQuantity": "6",
+                    "strItemSpecifications": "Dev0001",
+                    "numItemUnitPrice": "9.5",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 11:10:04",
+        "response_data": {
+            "orderNumber": "970000762296",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 11:10:09",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412352\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u6731\u840d\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u573a\u4e2d\u8def2800\u5f0448\u53f7202\u5ba4\",\"strReceiverMobile\":\"15921882832\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"7.2\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9300639602967\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u5fb7\u8fd0\u5168\u8102\u5976\u7c89 1kg\", \"numItemQuantity\": \"6\", \"strItemSpecifications\": \"Dev0001\", \"numItemUnitPrice\": \"9.5\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 11:10:09",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412352",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u6731\u840d",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u573a\u4e2d\u8def2800\u5f0448\u53f7202\u5ba4",
+            "strReceiverMobile": "15921882832",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "7.2",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9300639602967",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u5fb7\u8fd0\u5168\u8102\u5976\u7c89 1kg",
+                    "numItemQuantity": "6",
+                    "strItemSpecifications": "Dev0001",
+                    "numItemUnitPrice": "9.5",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 11:10:09",
+        "response_data": {
+            "orderNumber": "970000762297",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 11:10:13",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412353\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u6731\u840d\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u573a\u4e2d\u8def2800\u5f0448\u53f7202\u5ba4\",\"strReceiverMobile\":\"15921882832\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"0.8\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9349254002028\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7f8a\u5976\u7682 \u67e0\u6aac\u5473\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"GOAT0002\", \"numItemUnitPrice\": \"1.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9349254002011\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7f8a\u5976\u7682 \u539f\u5473\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"GOAT0001\", \"numItemUnitPrice\": \"1.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9349254002066\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7f8a\u5976\u7682 \u6930\u5976\u5473\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"GOAT0006\", \"numItemUnitPrice\": \"1.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9349254002035\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7f8a\u5976\u7682 \u71d5\u9ea6\u5473\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"GOAT0003\", \"numItemUnitPrice\": \"1.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9349254002042\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7f8a\u5976\u7682 \u8702\u871c\u5473\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"GOAT0004\", \"numItemUnitPrice\": \"1.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9349254002059\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u7f8a\u5976\u7682 \u963f\u7518\u6cb9\u5473\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"GOAT0005\", \"numItemUnitPrice\": \"1.99\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 11:10:13",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412353",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u6731\u840d",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u573a\u4e2d\u8def2800\u5f0448\u53f7202\u5ba4",
+            "strReceiverMobile": "15921882832",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "0.8",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9349254002028",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7f8a\u5976\u7682 \u67e0\u6aac\u5473",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "GOAT0002",
+                    "numItemUnitPrice": "1.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9349254002011",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7f8a\u5976\u7682 \u539f\u5473",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "GOAT0001",
+                    "numItemUnitPrice": "1.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9349254002066",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7f8a\u5976\u7682 \u6930\u5976\u5473",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "GOAT0006",
+                    "numItemUnitPrice": "1.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9349254002035",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7f8a\u5976\u7682 \u71d5\u9ea6\u5473",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "GOAT0003",
+                    "numItemUnitPrice": "1.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9349254002042",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7f8a\u5976\u7682 \u8702\u871c\u5473",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "GOAT0004",
+                    "numItemUnitPrice": "1.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9349254002059",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u7f8a\u5976\u7682 \u963f\u7518\u6cb9\u5473",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "GOAT0005",
+                    "numItemUnitPrice": "1.99",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 11:10:13",
+        "response_data": {
+            "orderNumber": "970000762298",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 11:41:54",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412471\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u5409\u4e39\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u8fbd\u5b81\u7701\u6c88\u9633\u5e02\u94c1\u897f\u533a\u5e94\u660c\u8857\u5c0f\u5317\u56db\u8def 9\u53f78\u95e8 \u5e94\u660c\u99a8\u9686\u5e7c\u513f\u56ed \",\"strReceiverMobile\":\"13842309762\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9418783002837\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Aptamil \u7231\u4ed6\u7f8e\u91d1\u88c5 \u4e8c\u6bb5K\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"APT0004\", \"numItemUnitPrice\": \"24.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 11:41:54",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412471",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u5409\u4e39",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u8fbd\u5b81\u7701\u6c88\u9633\u5e02\u94c1\u897f\u533a\u5e94\u660c\u8857\u5c0f\u5317\u56db\u8def 9\u53f78\u95e8 \u5e94\u660c\u99a8\u9686\u5e7c\u513f\u56ed ",
+            "strReceiverMobile": "13842309762",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9418783002837",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Aptamil \u7231\u4ed6\u7f8e\u91d1\u88c5 \u4e8c\u6bb5K",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "APT0004",
+                    "numItemUnitPrice": "24.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 11:41:54",
+        "response_data": {
+            "orderNumber": "970000762301",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 11:41:59",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412472\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u5409\u4e39\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u8fbd\u5b81\u7701\u6c88\u9633\u5e02\u94c1\u897f\u533a\u5e94\u660c\u8857\u5c0f\u5317\u56db\u8def 9\u53f78\u95e8 \u5e94\u660c\u99a8\u9686\u5e7c\u513f\u56ed \",\"strReceiverMobile\":\"13842309762\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9418783002837\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Aptamil \u7231\u4ed6\u7f8e\u91d1\u88c5 \u4e8c\u6bb5K\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"APT0004\", \"numItemUnitPrice\": \"24.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 11:41:59",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412472",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u5409\u4e39",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u8fbd\u5b81\u7701\u6c88\u9633\u5e02\u94c1\u897f\u533a\u5e94\u660c\u8857\u5c0f\u5317\u56db\u8def 9\u53f78\u95e8 \u5e94\u660c\u99a8\u9686\u5e7c\u513f\u56ed ",
+            "strReceiverMobile": "13842309762",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9418783002837",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Aptamil \u7231\u4ed6\u7f8e\u91d1\u88c5 \u4e8c\u6bb5K",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "APT0004",
+                    "numItemUnitPrice": "24.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 11:41:59",
+        "response_data": {
+            "orderNumber": "970000762302",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 11:43:12",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412481\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u79e6\u6d77\u658c\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u9655\u897f\u7701\u897f\u5b89\u5e02\u672a\u592e\u533a\u5f20\u5bb6\u5821\u8857\u9053\u7d2b\u8587\u98ce\u5c1a\u897f\u533a15\u680b\",\"strReceiverMobile\":\"18392603648\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9347832000008\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"S26\u4e00\u6bb5\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"S260001\", \"numItemUnitPrice\": \"20.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 11:43:12",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412481",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u79e6\u6d77\u658c",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u9655\u897f\u7701\u897f\u5b89\u5e02\u672a\u592e\u533a\u5f20\u5bb6\u5821\u8857\u9053\u7d2b\u8587\u98ce\u5c1a\u897f\u533a15\u680b",
+            "strReceiverMobile": "18392603648",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9347832000008",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "S26\u4e00\u6bb5",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "S260001",
+                    "numItemUnitPrice": "20.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 11:43:12",
+        "response_data": {
+            "orderNumber": "970000762303",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 12:13:52",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312491\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"06250125Amanda\",\"strSenderMobile\":\"0289648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u539f\u4f1f\u8fdb\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u4f5b\u5c71\u5e02\u5357\u6d77\u533a\u5927\u6ca5\u9547\u96c5\u7476\u77f3\u9f99\u6751\u77f3\u9f99\u4e1c\u885744\u53f7\",\"strReceiverMobile\":\"13823451728\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"0.9\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9300807287378\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"BM0014\", \"numItemUnitPrice\": \"16\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 12:13:52",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312491",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "06250125Amanda",
+            "strSenderMobile": "0289648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u539f\u4f1f\u8fdb",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u4f5b\u5c71\u5e02\u5357\u6d77\u533a\u5927\u6ca5\u9547\u96c5\u7476\u77f3\u9f99\u6751\u77f3\u9f99\u4e1c\u885744\u53f7",
+            "strReceiverMobile": "13823451728",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "0.9",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9300807287378",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "BM0014",
+                    "numItemUnitPrice": "16",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 12:13:52",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "receiver province can not be empty  ( \u53c2\u6570\u4e0d\u80fd\u4e3a\u7a7a[Province] )",
+            "resCode": "ERR11010",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 12:14:05",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312491\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"06250125Amanda\",\"strSenderMobile\":\"0289648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u539f\u4f1f\u8fdb\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\u4f5b\u5c71\u5e02\",\"strReceiverCity\":\"\u4f5b\u5c71\u5e02\",\"strReceiverDistrict\":\"\u5357\u6d77\u533a\",\"strReceiverDoorNo\":\"\u5927\u6ca5\u9547\u96c5\u7476\u77f3\u9f99\u6751\u77f3\u9f99\u4e1c\u885744\u53f7\",\"strReceiverMobile\":\"13823451728\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"0.9\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9300807287378\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"BM0014\", \"numItemUnitPrice\": \"16\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 12:14:05",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312491",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "06250125Amanda",
+            "strSenderMobile": "0289648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u539f\u4f1f\u8fdb",
+            "strCountryISO2": "",
+            "strReceiverProvince": "\u4f5b\u5c71\u5e02",
+            "strReceiverCity": "\u4f5b\u5c71\u5e02",
+            "strReceiverDistrict": "\u5357\u6d77\u533a",
+            "strReceiverDoorNo": "\u5927\u6ca5\u9547\u96c5\u7476\u77f3\u9f99\u6751\u77f3\u9f99\u4e1c\u885744\u53f7",
+            "strReceiverMobile": "13823451728",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "0.9",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9300807287378",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "BM0014",
+                    "numItemUnitPrice": "16",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 12:14:05",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "fail to find the destination, please check your input  ( \u6839\u636e\u201c\u4f5b\u5c71\u5e02\u201d\uff0c\u627e\u4e0d\u5230\u76ee\u7684\u5730\uff08\u5927\u5934\u7b14\uff09\uff0c\u8bf7\u6838\u5b9e\u4fee\u6539\u540e\u518d\u8bd5\uff01 )",
+            "resCode": "ERR14000",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 12:14:10",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312491\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"06250125Amanda\",\"strSenderMobile\":\"0289648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u539f\u4f1f\u8fdb\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\u4f5b\u5c71\u5e02\",\"strReceiverCity\":\"\u4f5b\u5c71\u5e02\",\"strReceiverDistrict\":\"\u5357\u6d77\u533a\",\"strReceiverDoorNo\":\"\u5927\u6ca5\u9547\u96c5\u7476\u77f3\u9f99\u6751\u77f3\u9f99\u4e1c\u885744\u53f7\",\"strReceiverMobile\":\"13823451728\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"0.9\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9300807287378\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"BM0014\", \"numItemUnitPrice\": \"16\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 12:14:10",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312491",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "06250125Amanda",
+            "strSenderMobile": "0289648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u539f\u4f1f\u8fdb",
+            "strCountryISO2": "",
+            "strReceiverProvince": "\u4f5b\u5c71\u5e02",
+            "strReceiverCity": "\u4f5b\u5c71\u5e02",
+            "strReceiverDistrict": "\u5357\u6d77\u533a",
+            "strReceiverDoorNo": "\u5927\u6ca5\u9547\u96c5\u7476\u77f3\u9f99\u6751\u77f3\u9f99\u4e1c\u885744\u53f7",
+            "strReceiverMobile": "13823451728",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "0.9",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9300807287378",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "BM0014",
+                    "numItemUnitPrice": "16",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 12:14:10",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "fail to find the destination, please check your input  ( \u6839\u636e\u201c\u4f5b\u5c71\u5e02\u201d\uff0c\u627e\u4e0d\u5230\u76ee\u7684\u5730\uff08\u5927\u5934\u7b14\uff09\uff0c\u8bf7\u6838\u5b9e\u4fee\u6539\u540e\u518d\u8bd5\uff01 )",
+            "resCode": "ERR14000",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 12:36:34",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312511\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"0625070433\u84dd\u4e0e\u767d\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u9ad8\u840d \",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\u6c5f\u82cf\u7701\",\"strReceiverCity\":\"\u5f20\u5bb6\u6e2f\u5e02\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5408\u5174\u4e66\u9662\u4e8c\u675141\u5e62601 \",\"strReceiverMobile\":\"18262690199 \",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"1.9\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9310160820488\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u5973\u58eb\u7231\u4e50\u7ef4\", \"numItemQuantity\": \"2\", \"strItemSpecifications\": \"Elevit001\", \"numItemUnitPrice\": \"47.27\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9344949001263\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u751f\u7269\u5c9b\u7cfb\u5217\u513f\u7ae5DHA 60\u7c92\", \"numItemQuantity\": \"4\", \"strItemSpecifications\": \"BI0006\", \"numItemUnitPrice\": \"15.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9316090502104\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"OSTELIN \u513f\u7ae5VD\u6ef4\u5242\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"OST001\", \"numItemUnitPrice\": \"6.4\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9300807287378\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"BM0014\", \"numItemUnitPrice\": \"16\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 12:36:34",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312511",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "0625070433\u84dd\u4e0e\u767d",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u9ad8\u840d ",
+            "strCountryISO2": "",
+            "strReceiverProvince": "\u6c5f\u82cf\u7701",
+            "strReceiverCity": "\u5f20\u5bb6\u6e2f\u5e02",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5408\u5174\u4e66\u9662\u4e8c\u675141\u5e62601 ",
+            "strReceiverMobile": "18262690199 ",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "1.9",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9310160820488",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u5973\u58eb\u7231\u4e50\u7ef4",
+                    "numItemQuantity": "2",
+                    "strItemSpecifications": "Elevit001",
+                    "numItemUnitPrice": "47.27",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9344949001263",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u751f\u7269\u5c9b\u7cfb\u5217\u513f\u7ae5DHA 60\u7c92",
+                    "numItemQuantity": "4",
+                    "strItemSpecifications": "BI0006",
+                    "numItemUnitPrice": "15.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9316090502104",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "OSTELIN \u513f\u7ae5VD\u6ef4\u5242",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "OST001",
+                    "numItemUnitPrice": "6.4",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9300807287378",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u6fb3\u4f73\u5b9d\u6709\u8165\u9c7c\u6cb9 400\u7c92",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "BM0014",
+                    "numItemUnitPrice": "16",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 12:36:34",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "fail to find the destination, please check your input  ( \u6839\u636e\u201c\u6c5f\u82cf\u7701\u201d\uff0c\u627e\u4e0d\u5230\u76ee\u7684\u5730\uff08\u5927\u5934\u7b14\uff09\uff0c\u8bf7\u6838\u5b9e\u4fee\u6539\u540e\u518d\u8bd5\uff01 )",
+            "resCode": "ERR14000",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 13:38:02",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412531\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"0625070433\u84dd\u4e0e\u767d\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u5468\u4f73\u654f\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5b89\u5fbd\u7701\u868c\u57e0\u5e02\u6000\u8fdc\u53bf\u5065\u5eb7\u8def76\u53f7\u5149\u660e\u793e\u533a\u95e8\u8bca\",\"strReceiverMobile\":\" 18196606335\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"7.2\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9421902960239\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"A2\u6210\u4eba\u5168\u8102\u5976\u7c89 1kg\", \"numItemQuantity\": \"6\", \"strItemSpecifications\": \"A20005\", \"numItemUnitPrice\": \"11.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 13:38:02",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412531",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "0625070433\u84dd\u4e0e\u767d",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u5468\u4f73\u654f",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5b89\u5fbd\u7701\u868c\u57e0\u5e02\u6000\u8fdc\u53bf\u5065\u5eb7\u8def76\u53f7\u5149\u660e\u793e\u533a\u95e8\u8bca",
+            "strReceiverMobile": " 18196606335",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "7.2",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9421902960239",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "A2\u6210\u4eba\u5168\u8102\u5976\u7c89 1kg",
+                    "numItemQuantity": "6",
+                    "strItemSpecifications": "A20005",
+                    "numItemUnitPrice": "11.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 13:38:02",
+        "response_data": {
+            "orderNumber": "970000762393",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 15:01:24",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412551\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250919\u738b\u971e\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u4e7e\u5764\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5317\u4eac\u5e02\u671d\u9633\u533a\u5b89\u5916\u5317\u82d1\u822a\u7a7a\u603b\u533b\u9662\u4e03\u75c5\u533a\u4ea7\u79d1\u62a4\u58eb\u7ad9\",\"strReceiverMobile\":\"18500125592\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"0.7\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9348107001508\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Eaoron \u6c34\u5149\u4fdd\u6e7f\u971c\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"Otherbeauty0204\", \"numItemUnitPrice\": \"17.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9348107001485\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u6c34\u5149\u723d\u80a4\u6c34\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"\", \"numItemUnitPrice\": \"14.99\", \"strIsDiscounted\": \"\" },{ \"strItemSKU\": \"9348107001492\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Eaoron \u6c34\u5149\u4fdd\u6e7f\u4e73\u6db2\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"Otherbeauty0203\", \"numItemUnitPrice\": \"16.99\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 15:01:24",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412551",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250919\u738b\u971e",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u4e7e\u5764",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5317\u4eac\u5e02\u671d\u9633\u533a\u5b89\u5916\u5317\u82d1\u822a\u7a7a\u603b\u533b\u9662\u4e03\u75c5\u533a\u4ea7\u79d1\u62a4\u58eb\u7ad9",
+            "strReceiverMobile": "18500125592",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "0.7",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9348107001508",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Eaoron \u6c34\u5149\u4fdd\u6e7f\u971c",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "Otherbeauty0204",
+                    "numItemUnitPrice": "17.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9348107001485",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u6c34\u5149\u723d\u80a4\u6c34",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "",
+                    "numItemUnitPrice": "14.99",
+                    "strIsDiscounted": ""
+                },
+                {
+                    "strItemSKU": "9348107001492",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Eaoron \u6c34\u5149\u4fdd\u6e7f\u4e73\u6db2",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "Otherbeauty0203",
+                    "numItemUnitPrice": "16.99",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 15:01:24",
+        "response_data": {
+            "orderNumber": "970000762455",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 15:05:00",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412561\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250919\u738b\u971e\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u4e8e\u5f66\u5229\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5c71\u4e1c\u7701 \u4e34\u6c82\u5e02 \u5170\u5c71\u533a  \u5c71\u4e1c\u7701\u4e34\u6c82\u5e02\u5170\u5c71\u533a\u51ef\u6069\u82b1\u56ed3-1-3101\",\"strReceiverMobile\":\"17753917060\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"7.2\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9300639602967\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"\u5fb7\u8fd0\u5168\u8102\u5976\u7c89 1kg\", \"numItemQuantity\": \"6\", \"strItemSpecifications\": \"Dev0001\", \"numItemUnitPrice\": \"9.5\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 15:05:00",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412561",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250919\u738b\u971e",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u4e8e\u5f66\u5229",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5c71\u4e1c\u7701 \u4e34\u6c82\u5e02 \u5170\u5c71\u533a  \u5c71\u4e1c\u7701\u4e34\u6c82\u5e02\u5170\u5c71\u533a\u51ef\u6069\u82b1\u56ed3-1-3101",
+            "strReceiverMobile": "17753917060",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "7.2",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9300639602967",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "\u5fb7\u8fd0\u5168\u8102\u5976\u7c89 1kg",
+                    "numItemQuantity": "6",
+                    "strItemSpecifications": "Dev0001",
+                    "numItemUnitPrice": "9.5",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 15:05:00",
+        "response_data": {
+            "orderNumber": "970000762456",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 17:07:49",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312611\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"06250500Luz\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u97e9\u6bc5\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\" \u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u7f57\u6e56\u533a\u65b0\u79c0\u6751\u5317\u533a3\u680b206  \u7ef5\u7f8a\u6cb9\u4e09\u7f50 \",\"strReceiverMobile\":\"13510513267 \",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"1.1\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9322316001108\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"GM\u7ef5\u7f8a\u6cb9\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"Otherbeautys0057\", \"numItemUnitPrice\": \"3.3\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 17:07:49",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312611",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "06250500Luz",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u97e9\u6bc5",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": " \u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u7f57\u6e56\u533a\u65b0\u79c0\u6751\u5317\u533a3\u680b206  \u7ef5\u7f8a\u6cb9\u4e09\u7f50 ",
+            "strReceiverMobile": "13510513267 ",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "1.1",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9322316001108",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "GM\u7ef5\u7f8a\u6cb9",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "Otherbeautys0057",
+                    "numItemUnitPrice": "3.3",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 17:07:49",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "receiver province can not be empty  ( \u53c2\u6570\u4e0d\u80fd\u4e3a\u7a7a[Province] )",
+            "resCode": "ERR11010",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 17:08:05",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"4PX\",\"strOrderNo\":\"202312611\",\"strServiceTypeCode\":\"EC\",\"strShopCode\":\"2023\",\"strSenderName\":\"06250500Luz\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u97e9\u6bc5\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\" \u5e7f\u4e1c\u7701\",\"strReceiverCity\":\"\u6df1\u5733\u5e02\",\"strReceiverDistrict\":\"\u7f57\u6e56\u533a\",\"strReceiverDoorNo\":\"\u65b0\u79c0\u6751\u5317\u533a3\u680b206  \u7ef5\u7f8a\u6cb9\u4e09\u7f50 \",\"strReceiverMobile\":\"13510513267 \",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"1.1\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9322316001108\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"GM\u7ef5\u7f8a\u6cb9\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"Otherbeautys0057\", \"numItemUnitPrice\": \"3.3\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 17:08:05",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "4PX",
+            "strOrderNo": "202312611",
+            "strServiceTypeCode": "EC",
+            "strShopCode": "2023",
+            "strSenderName": "06250500Luz",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u97e9\u6bc5",
+            "strCountryISO2": "",
+            "strReceiverProvince": " \u5e7f\u4e1c\u7701",
+            "strReceiverCity": "\u6df1\u5733\u5e02",
+            "strReceiverDistrict": "\u7f57\u6e56\u533a",
+            "strReceiverDoorNo": "\u65b0\u79c0\u6751\u5317\u533a3\u680b206  \u7ef5\u7f8a\u6cb9\u4e09\u7f50 ",
+            "strReceiverMobile": "13510513267 ",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "1.1",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9322316001108",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "GM\u7ef5\u7f8a\u6cb9",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "Otherbeautys0057",
+                    "numItemUnitPrice": "3.3",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 17:08:05",
+        "response_data": {
+            "orderNumber": "",
+            "resMsg": "insurance type is invalid  ( \u60a8\u9884\u62a5\u7684\u5546\u54c1:\u62a4\u80a4\u971c,\u4f4e\u4e8e\u6d77\u5173\u8981\u6c42\u7684\u6700\u4f4e\u4ef7\u683c\uff0c\u8bf7\u6309\u5b9e\u9645\u4ef7\u503c\u7533\u62a5[Specifications] )",
+            "resCode": "ERR12030",
+            "TaxAmount": null,
+            "TaxCurrencyCode": null
+        }
+    },
+    {
+        "time": "12-01-2019, 17:25:54",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412641\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u76db\u6dd1\u99a8\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5929\u6d25\u5e02\u6d25\u5357\u533a\u53cc\u6e2f\u65b0\u76c8\u5e84\u56ed32\u53f7\u697c\",\"strReceiverMobile\":\"13920012921\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9347832000008\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"S26\u4e00\u6bb5\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"S260001\", \"numItemUnitPrice\": \"20.95\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 17:25:54",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412641",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u76db\u6dd1\u99a8",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5929\u6d25\u5e02\u6d25\u5357\u533a\u53cc\u6e2f\u65b0\u76c8\u5e84\u56ed32\u53f7\u697c",
+            "strReceiverMobile": "13920012921",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9347832000008",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "S26\u4e00\u6bb5",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "S260001",
+                    "numItemUnitPrice": "20.95",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 17:25:54",
+        "response_data": {
+            "orderNumber": "970000762545",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 18:47:50",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412661\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250601MIA\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u738b\u9732\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4\",\"strReceiverMobile\":\"13776416764\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9421902960031\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"A2\u5a74\u513f\u5976\u7c89\u4e00\u6bb5A\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"A20001\", \"numItemUnitPrice\": \"37.85\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 18:47:50",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412661",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250601MIA",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u738b\u9732",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4",
+            "strReceiverMobile": "13776416764",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9421902960031",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "A2\u5a74\u513f\u5976\u7c89\u4e00\u6bb5A",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "A20001",
+                    "numItemUnitPrice": "37.85",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 18:47:50",
+        "response_data": {
+            "orderNumber": "970000762631",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 18:47:55",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010412662\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"06250601MIA\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u738b\u9732\",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4\",\"strReceiverMobile\":\"13776416764\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"3.6\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"9421902960031\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"A2\u5a74\u513f\u5976\u7c89\u4e00\u6bb5A\", \"numItemQuantity\": \"3\", \"strItemSpecifications\": \"A20001\", \"numItemUnitPrice\": \"37.85\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 18:47:55",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010412662",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "06250601MIA",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u738b\u9732",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u6c5f\u82cf\u7701\u5357\u4eac\u5e02\u6816\u971e\u533a\u8fc8\u768b\u6865\u8857\u9053\u548c\u71d5\u8def\u91d1\u6d66\u5fa1\u9f99\u6e7eB\u533a2\u680b1103\u5ba4",
+            "strReceiverMobile": "13776416764",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "3.6",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "9421902960031",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "A2\u5a74\u513f\u5976\u7c89\u4e00\u6bb5A",
+                    "numItemQuantity": "3",
+                    "strItemSpecifications": "A20001",
+                    "numItemUnitPrice": "37.85",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 18:47:55",
+        "response_data": {
+            "orderNumber": "970000762632",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    },
+    {
+        "time": "12-01-2019, 18:49:03",
+        "process": "before decode",
+        "request_body": "{\"branchId\":\"SHOP111\",\"branchKey\":\"123456\",\"strProviderCode\":\"CQCHS\",\"strOrderNo\":\"010410761\",\"strServiceTypeCode\":\"\",\"strShopCode\":\"0104\",\"strSenderName\":\"AMAusmore\",\"strSenderMobile\":\"89648377\",\"strSenderProvinceName\":\"\",\"strSenderCityName\":\"\",\"strSenderAddress\":\"\",\"strSenderPostCode\":\"\",\"strItemCurrency\":\"AUD\",\"strReceiverName\":\"\u59da\u51ac\u60a6 \",\"strCountryISO2\":\"\",\"strReceiverProvince\":\"\",\"strReceiverCity\":\"\",\"strReceiverDistrict\":\"\",\"strReceiverDoorNo\":\"\u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u5357\u5c71\u533a\u5357\u5934\u8857\u9053\u6d77\u5173\u751f\u6d3b\u533a\",\"strReceiverMobile\":\"13332942588\",\"strReceiverIDNumber\":\"\",\"strReceiverIDFrontCopy\":\"\",\"strReceiverIDBackCopy\":\"\",\"strOrderWeight\":\"1.3\",\"strWeightUnit\":\"KG\",\"strEndDelivertyType\":\"\",\"strInsuranceTypeCode\":\"N\",\"numInsuranceExpense\":0,\"strTraceNumber\":\"\",\"strRemarks\":\"\",\"items\":[{ \"strItemSKU\": \"15701\", \"strItemDeclareType\": \"\", \"strItemBrand\": \"\", \"strItemName\": \"Ever UGG 15701\", \"numItemQuantity\": \"1\", \"strItemSpecifications\": \"\", \"numItemUnitPrice\": \"53\", \"strIsDiscounted\": \"\" }]}"
+    },
+    {
+        "time": "12-01-2019, 18:49:03",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "CQCHS",
+            "strOrderNo": "010410761",
+            "strServiceTypeCode": "",
+            "strShopCode": "0104",
+            "strSenderName": "AMAusmore",
+            "strSenderMobile": "89648377",
+            "strSenderProvinceName": "",
+            "strSenderCityName": "",
+            "strSenderAddress": "",
+            "strSenderPostCode": "",
+            "strItemCurrency": "AUD",
+            "strReceiverName": "\u59da\u51ac\u60a6 ",
+            "strCountryISO2": "",
+            "strReceiverProvince": "",
+            "strReceiverCity": "",
+            "strReceiverDistrict": "",
+            "strReceiverDoorNo": "\u5e7f\u4e1c\u7701\u6df1\u5733\u5e02\u5357\u5c71\u533a\u5357\u5934\u8857\u9053\u6d77\u5173\u751f\u6d3b\u533a",
+            "strReceiverMobile": "13332942588",
+            "strReceiverIDNumber": "",
+            "strReceiverIDFrontCopy": "",
+            "strReceiverIDBackCopy": "",
+            "strOrderWeight": "1.3",
+            "strWeightUnit": "KG",
+            "strEndDelivertyType": "",
+            "strInsuranceTypeCode": "N",
+            "numInsuranceExpense": 0,
+            "strTraceNumber": "",
+            "strRemarks": "",
+            "items": [
+                {
+                    "strItemSKU": "15701",
+                    "strItemDeclareType": "",
+                    "strItemBrand": "",
+                    "strItemName": "Ever UGG 15701",
+                    "numItemQuantity": "1",
+                    "strItemSpecifications": "",
+                    "numItemUnitPrice": "53",
+                    "strIsDiscounted": ""
+                }
+            ]
+        }
+    },
+    {
+        "time": "12-01-2019, 18:49:03",
+        "response_data": {
+            "orderNumber": "970000762633",
+            "resMsg": "\u5f55\u5165\u6210\u529f",
+            "resCode": "0",
+            "TaxAmount": "",
+            "TaxCurrencyCode": ""
+        }
+    }
+]

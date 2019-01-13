@@ -1,0 +1,26 @@
+[
+    {
+        "time": "11-01-2019, 11:48:37",
+        "process": "before decode",
+        "request_body": "{\n\t\"branchId\":\"SHOP111\",\n\t\"branchKey\":\"123456\",\n\t\"strProviderCode\":\"Auex\",\n\t\"strOrderNo\":\"tes0zz123qzz001\"\n}"
+    },
+    {
+        "time": "11-01-2019, 11:48:37",
+        "process": "after decode",
+        "request_body": {
+            "branchId": "SHOP111",
+            "branchKey": "123456",
+            "strProviderCode": "Auex",
+            "strOrderNo": "tes0zz123qzz001"
+        }
+    },
+    {
+        "time": "11-01-2019, 11:48:37",
+        "response_data": {
+            "orderNumber": "tes0zz123qzz001",
+            "resMsg": "no courier matched, please check your courier name(\u8fd0\u8f93\u516c\u53f8\u540d\u65e0\u6cd5\u5339\u914d\uff0c\u8bf7\u68c0\u67e5\u60a8\u63d0\u4ea4\u7684\u8fd0\u8f93\u516c\u53f8\u540d)",
+            "resCode": "ERR99999",
+            "TrackingList": []
+        }
+    }
+]
